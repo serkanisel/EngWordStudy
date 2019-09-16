@@ -1,0 +1,55 @@
+﻿@model IPagedList<EWS.Model.EWSListWord>
+
+@foreach (var item in Model.EWSListWord)
+            {
+<div class="@showType" style="padding:1px;">
+    <div class="row multipleDiv" style="margin:2px;padding:1px;">
+        <div class="col-8">
+            <div class="row">
+                <div class="@showMeanCol" onclick="showMean('@item.UN')">
+                    <strong class="hand">@item.EWSWord.WordBody</strong>
+                </div>
+                <div class="@showMeanCol" id="mean_@item.UN" style="display:@showMean;" onclick="$('#mean_@item.UN').slideUp()">
+                    <span id="spanMean_@item.UN">@item.EWSWord.Description</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 text-right">
+            @{
+                string bilEKle = "";
+                string bilCikar = "";
+                string ogrEkle = "";
+                string ogrCikar = "";
+
+                if (item.EWSWord.Known)
+                {
+                    bilEKle = "none";
+                    ogrEkle = "none";
+                    ogrCikar = "none";
+                }
+                else
+                {
+                    bilCikar = "none";
+                }
+
+                if (item.EWSWord.WillLearn)
+                {
+                    ogrEkle = "none";
+                    bilEKle = "none";
+                    bilCikar = "none";
+                }
+                else
+                {
+                    ogrCikar = "none";
+                }
+            }
+
+            <a href="javascript:void(0)" id="btnMultipleBildiklerimeEkle_@item.WordUN" class="btn btn-circle btn-success" data-toggle="tooltip" data-placement="bottom" title="Bildiklerime Ekle" onclick="SetIKnow('@item.WordUN')" style="display:@bilEKle;"><i class="fa fa-check"></i></a>
+            <a href="javascript:void(0)" id="btnMultipleBildiklerimdenCikar_@item.WordUN" class="btn btn-circle btn-warning" data-toggle="tooltip" data-placement="bottom" title="Bildiklerimden Çıkar" onclick="RemoveIKnow('@item.WordUN')" style="display:@bilCikar;"><i class="fa fa-times"></i></a>
+            <a href="javascript:void(0)" id="btnOgrenecelerimeEkle_@item.WordUN" class="btn btn-circle btn-success" data-toggle="tooltip" data-placement="bottom" title="Öğreneceklerime Ekle" onclick="SetIWillLearn('@item.WordUN')" style="display:@ogrEkle;"><i class="fa fa-plus"></i></a>
+            <a href="javascript:void(0)" id="btnOgreneceklerimdenCikar_@item.WordUN" class="btn btn-circle btn-danger" data-toggle="tooltip" data-placement="bottom" title="Öğreneceklerimden Çıkar" onclick="RemoveILearn('@item.WordUN')" style="display:@ogrCikar;"><i class="fa fa-minus"></i></a>
+
+        </div>
+    </div>
+</div>
+                                    }

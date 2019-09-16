@@ -1,0 +1,96 @@
+﻿@model EWS.Model.EWSList
+
+<div class="row p-0">
+    <div class="col-12 p-2 mb-1 bg-secondary borderRadius5">
+        <div class="row">
+            <div class="col-3">
+                <span class="alert-heading" id="word" style="font-size:1.2em;font-weight:bold;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="col-9">
+                <div class="btn-group">
+                    <a id="btnAudio" href="javascript:void(0)" class="btn btn-info " data-toggle="tooltip" data-placement="top" title="dinle"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+                    <a id="btnLeft" href="javascript:void(0)" class="btn btn-info " data-toggle="tooltip" data-placement="top" title="önceki"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                    <a id="btnRight" href="javascript:void(0)" class="btn btn-info " data-toggle="tooltip" data-placement="top" title="sonraki"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <a id="btnIknow" href="#" class="btn btn-info " data-toggle="tooltip" data-placement="top" title="Biliyorum"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Bildiklerimden Çıkar" id="iknowsuccess" style="display:none;"><i class="fa fa-minus-circle"></i></a>
+                    <a id="btnILearn" href="#" class="btn btn-info " data-toggle="tooltip" data-placement="top" title="Öğreneceklerime Ekle"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Öğrenceklerimden Çıkar" id="iwilllearnsuccess" style="display:none;"><i class="fa fa-minus"></i></a>
+                    <a id="btnAddComment" href="javascript:void(0)" class="btn btn-info " data-toggle="tooltip" data-placement="top" title="Yorum/Örnek Cümle Ekle"><i class="fa fa-comments" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="col-12 p-2 mb-1 bg-secondary borderRadius5">
+        <span id="description"></span>
+    </div>
+    <div class="col-12 p-2 mb-1 bg-secondary borderRadius5">
+        @Html.Partial("OrnekCumleYorumEkle")
+    </div>
+</div>
+
+
+
+<input type="hidden" id="rownumber" value="1" />
+
+<script>
+    var listID = $("#key").val();
+    var type = $("#type").val();
+
+    $("#btnLeft").click(function myfunction() {
+        leftword();
+    });
+
+    $("#btnRight").click(function myfunction() {
+        rightword();
+    });
+
+    $("#btnILearn").click(function myfunction() {
+        IWillLearn();
+    });
+
+    $("#btnIknow").click(function myfunction() {
+        IKnow();
+    });
+    $("#iknowsuccess").click(function myfunction() {
+        RemoveFromIKnow();
+    });
+
+    $("#iwilllearnsuccess").click(function myfunction() {
+        RemoveIWillLearn();
+    });
+
+
+
+ 
+
+    function leftword() {
+        var rownum = parseInt($("#rownumber").val());
+        var listCount = parseInt($("#listCount").val());
+        if (rownum <= listCount)
+            rownum = parseInt(rownum) - 1;
+
+        if (rownum > 0 && rownum <= listCount) {
+            $("#txtrownumber").val(rownum);
+            $("#rownumber").val(rownum);
+            getWord(listID, rownum);
+
+        }
+    }
+
+    function rightword() {
+        var rownum = parseInt($("#rownumber").val());
+        var listCount = parseInt($("#listCount").val());
+        if (rownum < listCount)
+            rownum = rownum + 1;
+
+        if (rownum > 0 && rownum <= listCount) {
+            $("#txtrownumber").val(rownum);
+            $("#rownumber").val(rownum);
+            getWord(listID, rownum);
+        }
+    }
+
+   
+</script>

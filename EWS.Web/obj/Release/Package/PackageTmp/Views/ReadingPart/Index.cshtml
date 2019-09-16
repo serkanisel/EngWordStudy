@@ -1,0 +1,52 @@
+﻿@model List<EWS.Model.EWSReadPart>
+<div class="container">
+    <div class="mb-2 row border-secondary border-bottom">
+        <div class="col-8">
+            <h4>Okuma Parçaları</h4>
+        </div>
+        <div class="col-4 text-right mb-2">
+            <input type="file" id="FileUploadForAnalyze" multiple style="display:none;" />
+            <button type="button" id="btnUploadFile" value="Dosya Analiz Et" class="btn btn-dark">Dosya Analiz <span class="btn-label btn-label-right"><i class="fa fa-upload"></i></span></button>
+            <a href="javascript:void(0)" class="btn btn-dark" onclick="YeniOkumaParcasi()">Yeni Okuma Parçası <i class="fa fa-plus"></i></a>
+        </div>
+    </div>
+    <div class="row p-0 border-bottom border-dark" id="divNewReadingPart" style="display:none;">
+        <div class="col-12 p-2 m-1">
+            <input type="text" id="readingPartName" name="readingPartName" class="form-control" placeholder="Okuma Parçası Adı"/>
+        </div>
+        <div class="col-12 p-2 m-1">
+           <textarea id="txtReadingPart" class="form-control" style="min-height:500px;max-height:500px;">
+            </textarea>
+        </div>
+        <div class="col-12 mt-2 p-2">
+            <a href="javascript:void(0)" class="btn btn-warning" onclick="OkumaParcasiKaydet()"><i class="fa fa-save"> Kaydet</i></a>
+        </div>
+    </div>
+</div>
+<div id="fileAnalyzeUploadResult">
+
+</div>
+<span id="fileName">
+
+</span>
+
+<script>
+    $(document).ready(function () {
+        $("#btnUploadFile").click(function () {
+            $('#FileUploadForAnalyze').trigger('click');
+        });
+
+        $("#FileUploadForAnalyze").change(function () {
+            readURLForFileAnalyze(this);
+        });
+    });
+
+    function YeniOkumaParcasi() {
+        $("#divNewReadingPart").slideToggle();
+    }
+</script>
+
+<div class="row" id="readingPartList">
+    @Html.Partial("ReadPartGrid", Model)
+</div>
+

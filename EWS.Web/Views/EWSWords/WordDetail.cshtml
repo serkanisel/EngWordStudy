@@ -1,0 +1,28 @@
+﻿@model EWS.Model.EWSWord
+
+<div class="row">
+    <div class="col-md-6 mt-2">
+        <input type="hidden" value="@Model.UN" id="selectedWordUN" />
+        @Html.Partial("../EWSWords/Word", Model)
+        <a href="javascript:void(0)" class="btn btn-primary" id="btnSampleSentenceAdd"><i class="fa fa-plus"></i> Örnek Cümle Ekle</a><br />
+        <a href="https://translate.google.com/#view=home&op=translate&sl=en&tl=tr&text=@Model.WordBody" target="_blank">Google Translate </a><br />
+        <a href="https://www.seslisozluk.net/@Model.WordBody-nedir-ne-demek/" target="_blank">Sesli Sözlük</a>
+    </div>
+    <div class="col-md-6 mt-2">
+        <div id="divNewSentence" style="display:none;">
+            @Html.Partial("../EWSWords/SampleSentence",new EWS.Model.EWSSampleSentence())
+        </div>
+        <div id="divSampleSentences">
+           @Html.Partial("SentenceGrid",Model.EWSSampleSentence.ToList())
+        </div>
+    </div>
+</div>
+<div class="text-right closebutton">
+    <a href="javascript:void(0)" class="btn btn-secondary" onclick="footerkapat()" id="btnFooterKapat">X</a>
+</div>
+
+<script>
+    $("#btnSampleSentenceAdd").click(function () {
+        $("#divNewSentence").slideToggle();
+    });
+</script>

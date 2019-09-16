@@ -1,0 +1,22 @@
+﻿@model List<EWS.Model.EWSSampleSentence>
+
+@{
+    int a = 0;
+    foreach (var item in Model)
+    {
+        a++;
+        <div class="row" id="rowSentence_@item.UN">
+            <div class="col-12">
+                <h5 class="font-italic">
+                <a class="btn btn-warning btn-sm hand"><i class="fa fa-minus" onclick="DeleteRelationWordSentence('@item.UN')"></i></a>
+                <span class="badge badge-light">@a.ToString()</span> @item.Sentence</h5>
+                <p class="mb-2">@item.SentenceMean</p>
+            </div>
+        </div>
+
+    }
+}
+
+<div id="divSentenceGridResult">
+
+</div>

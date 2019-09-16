@@ -1,0 +1,68 @@
+D:\Projects\EWS\EWS.Model\bin\Debug\EWS.Model.dll.config
+D:\Projects\EWS\EWS.Model\bin\Debug\EWS.Model.dll
+D:\Projects\EWS\EWS.Model\bin\Debug\EWS.Model.pdb
+D:\Projects\EWS\EWS.Model\bin\Debug\EntityFramework.dll
+D:\Projects\EWS\EWS.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\EWS\EWS.Model\bin\Debug\EWS.Entity.dll
+D:\Projects\EWS\EWS.Model\bin\Debug\EWS.Entity.pdb
+D:\Projects\EWS\EWS.Model\bin\Debug\EntityFramework.xml
+D:\Projects\EWS\EWS.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\EWS\EWS.Model\obj\Debug\EWS.Model.csprojResolveAssemblyReference.cache
+D:\Projects\EWS\EWS.Model\obj\Debug\EWS.Model.dll
+D:\Projects\EWS\EWS.Model\obj\Debug\EWS.Model.pdb
+E:\projects\EWS\EWS.Model\bin\Debug\EWS.Model.dll.config
+E:\projects\EWS\EWS.Model\bin\Debug\EWS.Model.dll
+E:\projects\EWS\EWS.Model\bin\Debug\EWS.Model.pdb
+E:\projects\EWS\EWS.Model\bin\Debug\EntityFramework.dll
+E:\projects\EWS\EWS.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\projects\EWS\EWS.Model\bin\Debug\EWS.Entity.dll
+E:\projects\EWS\EWS.Model\bin\Debug\EWS.Entity.pdb
+E:\projects\EWS\EWS.Model\bin\Debug\EntityFramework.xml
+E:\projects\EWS\EWS.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\projects\EWS\EWS.Model\obj\Debug\EWS.Model.csprojResolveAssemblyReference.cache
+E:\projects\EWS\EWS.Model\obj\Debug\EWS.Model.dll
+E:\projects\EWS\EWS.Model\obj\Debug\EWS.Model.pdb
+C:\Projects\EWS\EWS.Model\bin\Debug\EWS.Model.dll.config
+C:\Projects\EWS\EWS.Model\bin\Debug\EWS.Model.dll
+C:\Projects\EWS\EWS.Model\bin\Debug\EWS.Model.pdb
+C:\Projects\EWS\EWS.Model\bin\Debug\EntityFramework.dll
+C:\Projects\EWS\EWS.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\EWS\EWS.Model\bin\Debug\EWS.Entity.dll
+C:\Projects\EWS\EWS.Model\bin\Debug\EWS.Entity.pdb
+C:\Projects\EWS\EWS.Model\bin\Debug\EntityFramework.xml
+C:\Projects\EWS\EWS.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\EWS\EWS.Model\obj\Debug\EWS.Model.csprojResolveAssemblyReference.cache
+C:\Projects\EWS\EWS.Model\obj\Debug\EWS.Model.dll
+C:\Projects\EWS\EWS.Model\obj\Debug\EWS.Model.pdb
+C:\Projects\EWS\EWS.Model\bin\Debug\EWS.Entity.dll.config
+E:\Projects\EWS\EWS.Model\bin\Debug\EWS.Entity.dll.config
+C:\sisel\EWS\EWS.Model\bin\Debug\EWS.Model.dll.config
+C:\sisel\EWS\EWS.Model\bin\Debug\EWS.Model.dll
+C:\sisel\EWS\EWS.Model\bin\Debug\EWS.Model.pdb
+C:\sisel\EWS\EWS.Model\bin\Debug\EntityFramework.dll
+C:\sisel\EWS\EWS.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\sisel\EWS\EWS.Model\bin\Debug\EWS.Entity.dll
+C:\sisel\EWS\EWS.Model\bin\Debug\EWS.Entity.pdb
+C:\sisel\EWS\EWS.Model\bin\Debug\EWS.Entity.dll.config
+C:\sisel\EWS\EWS.Model\bin\Debug\EntityFramework.xml
+C:\sisel\EWS\EWS.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\sisel\EWS\EWS.Model\obj\Debug\EWS.Model.csprojResolveAssemblyReference.cache
+C:\sisel\EWS\EWS.Model\obj\Debug\EWS.Model.csproj.CoreCompileInputs.cache
+C:\sisel\EWS\EWS.Model\obj\Debug\EWS.Model.csproj.CopyComplete
+C:\sisel\EWS\EWS.Model\obj\Debug\EWS.Model.dll
+C:\sisel\EWS\EWS.Model\obj\Debug\EWS.Model.pdb
+D:\My Projects\EWS\EWS.Model\bin\Debug\EWS.Model.dll.config
+D:\My Projects\EWS\EWS.Model\bin\Debug\EWS.Model.dll
+D:\My Projects\EWS\EWS.Model\bin\Debug\EWS.Model.pdb
+D:\My Projects\EWS\EWS.Model\bin\Debug\EntityFramework.dll
+D:\My Projects\EWS\EWS.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\My Projects\EWS\EWS.Model\bin\Debug\EWS.Entity.dll
+D:\My Projects\EWS\EWS.Model\bin\Debug\EWS.Entity.pdb
+D:\My Projects\EWS\EWS.Model\bin\Debug\EWS.Entity.dll.config
+D:\My Projects\EWS\EWS.Model\bin\Debug\EntityFramework.xml
+D:\My Projects\EWS\EWS.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\My Projects\EWS\EWS.Model\obj\Debug\EWS.Model.csprojAssemblyReference.cache
+D:\My Projects\EWS\EWS.Model\obj\Debug\EWS.Model.csproj.CoreCompileInputs.cache
+D:\My Projects\EWS\EWS.Model\obj\Debug\EWS.Model.csproj.CopyComplete
+D:\My Projects\EWS\EWS.Model\obj\Debug\EWS.Model.dll
+D:\My Projects\EWS\EWS.Model\obj\Debug\EWS.Model.pdb

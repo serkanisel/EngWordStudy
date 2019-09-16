@@ -1,0 +1,370 @@
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\csc.exe
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\vbc.exe
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\ApplicationInsights.config
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.dll.config
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.pdb
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Newtonsoft.Json.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Helpers.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Mvc.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Razor.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Optimization.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Owin.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Business.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EntityFramework.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.WebHost.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Net.Http.Formatting.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.dll
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.pdb
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Newtonsoft.Json.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Helpers.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Mvc.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Razor.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Optimization.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.pdb
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Business.pdb
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EntityFramework.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.WebHost.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\System.Net.Http.Formatting.xml
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.pdb
+E:\projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.pdb
+E:\projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.csprojResolveAssemblyReference.cache
+E:\projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.dll
+E:\projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.pdb
+D:\Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.csprojResolveAssemblyReference.cache
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\ApplicationInsights.config
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\csc.exe
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\vbc.exe
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.dll.config
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.pdb
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Helpers.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Mvc.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Razor.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Optimization.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Owin.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Business.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EntityFramework.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.dll
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.pdb
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Helpers.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Mvc.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Razor.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Optimization.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.pdb
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Business.pdb
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EntityFramework.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.WebHost.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.pdb
+D:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.pdb
+D:\Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.dll
+D:\Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.pdb
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\ApplicationInsights.config
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\csc.exe
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\vbc.exe
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.dll.config
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.pdb
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Razor.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Owin.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Business.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EntityFramework.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.pdb
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Razor.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.pdb
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Business.pdb
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EntityFramework.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.pdb
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.pdb
+C:\Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.csprojResolveAssemblyReference.cache
+C:\Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.dll
+C:\Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.pdb
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.dll.config
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.dll.config
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.dll.config
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.dll.config
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EPPlus.dll
+C:\Projects\EWS\EWS.Web.Tests\bin\Debug\EPPlus.xml
+E:\Projects\EWS\EWS.Web.Tests\bin\Debug\EPPlus.dll
+E:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.dll.config
+E:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.dll.config
+E:\Projects\EWS\EWS.Web.Tests\bin\Debug\EPPlus.xml
+E:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.dll.config
+E:\Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.dll.config
+E:\Projects\EWS\EWS.Web.Tests\bin\Debug\tr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\ApplicationInsights.config
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\csc.exe
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\vbc.exe
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.dll.config
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.pdb
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Helpers.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Mvc.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Razor.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Optimization.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Owin.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Business.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EPPlus.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EntityFramework.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.dll
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.pdb
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.dll.config
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Helpers.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Mvc.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Razor.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Optimization.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.pdb
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.dll.config
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Business.pdb
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EPPlus.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EntityFramework.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.pdb
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.dll.config
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.pdb
+C:\sisel\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.dll.config
+C:\sisel\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.csprojResolveAssemblyReference.cache
+C:\sisel\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.csproj.CoreCompileInputs.cache
+C:\sisel\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.csproj.CopyComplete
+C:\sisel\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.dll
+C:\sisel\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.pdb
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\ApplicationInsights.config
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\csc.exe
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\vbc.exe
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.dll.config
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.Tests.pdb
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Helpers.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Mvc.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Razor.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Optimization.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Owin.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Business.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EPPlus.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EntityFramework.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.dll
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.pdb
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Web.dll.config
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Helpers.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Mvc.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Razor.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Optimization.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.pdb
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Entity.dll.config
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Business.pdb
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EPPlus.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EntityFramework.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Web.Http.WebHost.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.pdb
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Repository.dll.config
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.pdb
+D:\My Projects\EWS\EWS.Web.Tests\bin\Debug\EWS.Model.dll.config
+D:\My Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.csprojAssemblyReference.cache
+D:\My Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.csproj.CoreCompileInputs.cache
+D:\My Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.csproj.CopyComplete
+D:\My Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.dll
+D:\My Projects\EWS\EWS.Web.Tests\obj\Debug\EWS.Web.Tests.pdb

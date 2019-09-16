@@ -1,0 +1,107 @@
+﻿<div class="container">
+    <div class="row border-dark border-bottom mb-2">
+        <div class="col-5">
+            <h4>Kelimeler</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pillsBenimKelimelerim" data-toggle="pill" href="#divBenimKelimelerim" role="tab" aria-controls="divBenimKelimelerim" aria-expanded="true" onclick="GetEkledigimKelimeler('contentBenimKelimelerim')"><i class="fa fa-google"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pillsBildigimKelimeler" data-toggle="pill" href="#divBildigimKelimeler" role="tab" aria-controls="divBildigimKelimeler" aria-expanded="true" onclick="GetKnownWord()"><i class="fa fa-check"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pillsOgrenmeListem" data-toggle="pill" href="#divOgrenmeListesi" role="tab" aria-controls="divOgrenmeListesi" aria-expanded="true" onclick="GetIWillLearnWords()"><i class="fa fa-graduation-cap"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pillsYeniKelime" data-toggle="pill" href="#divYeniKelime" role="tab" aria-controls="divYeniKelime" aria-expanded="true"><i class="fa fa-plus"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pillsKelimeArama" data-toggle="pill" href="#divKelimeArama" role="tab" aria-controls="divKelimeArama" aria-expanded="true"><i class="fa fa-search"></i></a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="divBenimKelimelerim" role="tabpanel" aria-labelledby="pillsBenimKelimelerim">
+            <div class="row">
+                <div class="col-12" id="contentBenimKelimelerim">
+                    Benim kayıt ettiğim kelimeler.
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade show" id="divBildigimKelimeler" role="tabpanel" aria-labelledby="pillsBildigimKelimeler">
+            <div id="contentBildigimKelimeler">
+                Bildiğim Kelimeler
+            </div>
+        </div>
+
+        <div class="tab-pane fade show" id="divOgrenmeListesi" role="tabpanel" aria-labelledby="pillsOgrenmeListesi">
+            <div id="contentOgrenmeListem">
+                Öğrenme Listem
+            </div>
+        </div>
+
+        <div class="tab-pane fade show" id="divYeniKelime" role="tabpanel" aria-labelledby="pillsYeniKelime">
+            <div class="container" id="divNewWord">
+                <div class="row border-bottom pb-2 mb-2 border-dark">
+                    <div class="col-12 p-0">
+                        <h4>Yeni Kelime</h4>
+                    </div>
+                </div>
+                <div class="row pb-2">
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="txtWordBody" placeholder="kelime" />
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="txtDescription" placeholder="anlamı" />
+                    </div>
+                    <div class="col-2 text-right">
+                        <a href="javascript:void(0)" id="btnYeniKelimeKaydet" onclick="yeniKelimeKaydet('addWordResult')" class="btn btn-warning"><i class="fa fa-save"></i> Kaydet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade show" id="divKelimeArama" role="tabpanel" aria-labelledby="pillsKelimeArama">
+            <div class="container" id="divKelimeAra">
+                <div class="row border-bottom pb-2 mb-2 border-dark">
+                    <div class="col-12 p-0">
+                        <h4>Kelime Ara</h4>
+                    </div>
+                </div>
+                <div class="row pb-2">
+                    <div class="col-10">
+                        <input type="text" class="form-control" id="bodyText" name="bodyText" placeholder="kelime" onkeydown="return kelimeAra(event)" />
+                    </div>
+                    <div class="col-2 text-right">
+                        <a href="javascript:void(0)" id="btnKelimeAra" class="btn btn-dark"><i class="fa fa-search"></i> Ara</a>
+                    </div>
+                </div>
+                <div class="row" id="addWordResult">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    GetEkledigimKelimeler("contentBenimKelimelerim");
+    function kelimeAra(event) {
+        if (event.which === 13 || event.keyCode === 13) {
+            var body = $("#bodyText").val();
+
+            GlobalWordSearch(body, "addWordResult");
+        }
+        return true;
+    }
+</script>

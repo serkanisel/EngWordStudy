@@ -1,0 +1,70 @@
+﻿@model EWS.Model.EWSReadPart
+@using EWS.Web.Helpers
+
+<div class="container p-0">
+    <div class="row p-0 border-bottom border-dark pb-2">
+        <div class="col-8 p-0">
+            @*@Html._EWSDropdown("EWSReadingPart", "", false, "", "", "Lookup/GetEWSReadingPart?userID=" + Model.UserID.ToString(), "UN", "Name", modelValue: Model.UN, secinizEkle: false)*@
+            <h4 class="font-italic">@Model.Name</h4>
+            <input type="hidden" id="readPartListUN" value="@Model.ListUN" />
+        </div>
+        <div class="col-4 p-0 text-right">
+            @*<a href="@Url.Action("ListDetail", "EWSLists", new { listID=Model.ListUN } )" class="btn btn-info"><i class="fa fa-crosshairs"></i></a>
+                <a href="javascript:void(0)" class="btn btn-info"><i class="fa fa-check"></i></a>*@
+            <a href="javascript:void(0)" class="btn btn-primary" onclick="ReadingPartDuzenle()">Düzenle</a>
+            <a href="@Url.Action("Index", "ReadingPart")" class="btn btn-dark"><i class="fa fa-backward"></i> Listeye Geri Dön</a>
+        </div>
+    </div>
+    <div class="row p-0 mt-2">
+        <div id="readingPart" class="col-12" style="max-height:800px;overflow:auto;outline:none;">
+
+        </div>
+        @*<div id="readingPartHtml" class="col-12" style="max-height:800px;overflow:auto;outline:none;">
+
+        </div>*@
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function myfunction() {
+        $("#txtReadingPart").click(function myfunction() {
+            getSelectionText();
+        });
+
+        changeReadingPart('@Model.UN');
+    });
+
+    $("#readingPart").click(function () {
+        getSelectionText();
+    });
+
+    function ReadingPartDuzenle() {
+    var toolbarOptions = [
+  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+  ['blockquote', 'code-block'],
+
+  [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+  [{ 'direction': 'rtl' }],                         // text direction
+
+  [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+  [{ 'font': [] }],
+  [{ 'align': [] }],
+
+  ['clean']                                         // remove formatting button
+];
+    var quill = new Quill('#readingPart', {
+        modules: {
+            toolbar: toolbarOptions
+        },
+        theme: 'snow'
+    });
+    }
+       
+</script>

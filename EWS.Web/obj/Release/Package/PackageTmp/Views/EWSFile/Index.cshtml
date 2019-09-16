@@ -1,0 +1,22 @@
+﻿<h4>Sözlük Upload</h4>
+<input type="file" id="FileUpload" multiple style="display:none;" />
+<button type="button" id="btnUploadFile"  value="Sözlük Upload" class="btn btn-info">Sözlük Dosyasını<span class="btn-label btn-label-right"><i class="fa fa-upload"></i></span></button>
+
+<div id="fileUploadResult">
+
+</div>
+<span id="fileName">
+
+</span>
+
+<script>
+    $(document).ready(function () {
+        $("#btnUploadFile").click(function () {
+            $('#FileUpload').trigger('click');
+        });
+
+        $("#FileUpload").change(function () {
+            readURL(this);
+        });
+    });
+</script>

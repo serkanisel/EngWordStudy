@@ -1,0 +1,38 @@
+﻿@model List<EWS.Model.EWSList>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 col-md-4 col-sm-12 p-0 ewslist" id="EWSList_@item.UN">
+            <div class="row m-1 p-2 indexBody bg-light">
+                <div class="col-12 text-center">
+                    <h5 class="font-italic">@item.Name</h5>
+                </div>
+                <div class="col-4">
+                    <span class="font-italic badge badge-dark">Toplam : @item.EWSListWord.Count()</span>
+                </div>
+                <div class="col-4">
+                    @if (item.ListKnow != null)
+                    {
+                    <span class="font-italic badge badge-dark">Bilinen : @item.ListKnow.Count()</span>
+                    }
+                </div>
+                <div class="overlay">
+                    <div class="text">
+                        @if (item.UserID == 1 && item.EWSListWord.Count() > 0)
+                        {
+                            <a href="@Url.Action("ListDetail","EWSLists", new { listID=@item.UN })" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Analiz Et"><i class="fa fa-crosshairs" aria-hidden="true"></i></a>
+                        }
+
+                        @if (item.UserID != 1)
+                        {
+                            <a href="@Url.Action("Preview","EWSLists", new { listID=@item.UN })" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Analiz Et"><i class="fa fa-crosshairs" aria-hidden="true"></i></a>
+                            <a href="@Url.Action("AddWordToList","EWSLists", new { listID=@item.UN })" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Listeye Yönetimi"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                            <a href="javascript:void(0)" onclick="deleteList('@item.UN')" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Listeyi Sil"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

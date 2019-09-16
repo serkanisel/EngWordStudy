@@ -1,0 +1,20 @@
+﻿@model List<EWS.Model.EWSList>
+
+@using EWS.Web.Helpers
+
+<div class="container">
+    <div class="row" id="listForWord">
+       @Html.Partial("ListGrid",Model)
+    </div>
+    <div class="row">
+        <div class="col-12 pb-2">
+            @Html._EWSDropdown("EWSList", "", false, "", "", "Lookup/GetEWSLists?userID=" + ((EWS.Model.EWSUser)Session["CurrentUser"]).ID.ToString(), "UN", "Name", secinizEkle: true, style: "height:40px;font-weight:bold;")
+        </div>
+        <div class="col-12 pb-2">
+            <a href="javascript:void(0)" class="btn btn-dark"><i class="fa fa-plus" onclick="WordAddToList('@ViewBag.WordUN')"> Listeye Ekle</i></a>
+        </div>
+    </div>
+</div>
+
+
+

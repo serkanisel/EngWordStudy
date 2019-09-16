@@ -1,0 +1,12 @@
+﻿@model EWS.Model.EWSList
+
+<div class="row mt-2 p-0">
+    @foreach (var item in Model.EWSListWord)
+    {
+        <div class="col-12 p-0">
+            <div class="mb-1 p-1 pl-2 bg-light">
+                @Html.Partial("../EWSWords/Word", item.EWSWord)
+            </div>
+        </div>
+    }
+</div>

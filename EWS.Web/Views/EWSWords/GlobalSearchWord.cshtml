@@ -1,0 +1,18 @@
+﻿@model List<EWS.Model.EWSWord>
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3 col-md-4 col-sm-12 p-0">
+                <div class="m-1 bg-light p-2">
+                    @Html.Partial("Word", item)
+                </div>
+
+            </div>
+        }
+
+    </div>
+</div>
+

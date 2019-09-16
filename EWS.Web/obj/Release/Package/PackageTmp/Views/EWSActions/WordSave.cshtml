@@ -1,0 +1,30 @@
+﻿@if(ViewBag.MessageType == "success")
+{
+    <div class="alert alert-success" role="alert" onclick="f()">
+        <strong>EWS Message!</strong> @ViewBag.Message
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+@if (ViewBag.MessageType == "error")
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>EWS Message!</strong> @ViewBag.Message
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+
+@if (ViewBag.MessageType == "info")
+{
+    <div class="alert alert-info" role="alert" onclick="f()">
+        <strong>EWS Message!</strong> @ViewBag.Message
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}

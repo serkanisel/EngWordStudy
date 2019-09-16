@@ -1,0 +1,61 @@
+﻿<script src="~/Scripts/jquery-1.10.2.js"></script>
+<a href="javascript:void(0)" onclick="$(this).parent().slideToggle();" class="close">close</a>
+<header class="major2"><h3>@ViewBag.Title</h3></header>
+
+<form>
+    <div class="form-group">
+        @*<span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>*@
+        <input id="word" type="text" class="form-control" name="word" placeholder="word">
+    </div>
+    <div class="form-group">
+        @*<span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>*@
+        <input id="description" type="text" class="form-control" name="description" placeholder="description">
+    </div>
+    <div class="form-group">
+        @*<span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>*@
+        <input id="sample" type="text" class="form-control" name="description" placeholder="sample sentence">
+    </div>
+    <button type="button" class="button orange" id="btnSaveWord"><i class="glyphicon glyphicon-save">Kaydet</i></button>
+    @*<div class="input-group">
+        <span class="input-group-addon">Text</span>
+        <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+    </div>*@
+</form>
+
+<script>
+    $(document).ready(function () {
+        $("#btnSaveWord").click(function () {
+            wordSave();
+        });
+    });
+
+    function wordSave() {
+        console.log("kaydet function");
+        var word = $("#word").val();
+        var desc = $("#description").val();
+        var samp = $("#sample").val();
+
+        var newword = {
+            WordBody: word,
+            Decsription: desc,
+
+        };
+
+
+        $.ajax({
+            url: '@Url.Action("NewWord", "EWSWords")',
+            dataType: 'json',
+            type: 'post',
+            data: { wordbody: word, description: desc, samplesentence: samp },
+            async:false,
+            success: function (data, textStatus, jQxhr) {
+                console.log("OK");
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        });
+
+       
+    }
+</script>

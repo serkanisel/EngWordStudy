@@ -1,0 +1,13 @@
+﻿@model List<EWS.Model.EWSSampleSentence>
+
+<div class="container">
+    <div class="mb-2 row border-secondary border-bottom">
+        <div class="col-8">
+            <h4><span class="font-italic font-weight-bold">@ViewBag.ReadPartName</span> Okuma Parçası Cümleleri</h4>
+        </div>
+        <div class="col-4 text-right mb-2">
+            <a href="@Url.Action("Index","ReadingPart")" class="btn btn-dark"><i class="fa fa-backward"></i> <span class="hidden-sm-down">Listeye Dön</span></a>
+        </div>
+    </div>
+    @Html.Partial("ReadPartSentence", Model)
+</div>

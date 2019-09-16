@@ -1,0 +1,92 @@
+﻿@model List<EWS.Model.EWSReadPart>
+    <div class="container">
+        <div class="mb-2 row border-secondary border-bottom">
+            <div class="col-8">
+                <h4>Okuma Parçaları</h4>
+            </div>
+            <div class="col-4 text-right mb-2">
+                <input type="file" id="FileUploadForAnalyze" multiple style="display:none;" />
+                <button type="button" id="btnUploadFile" value="Dosya Analiz Et" class="btn btn-dark">Dosya Analiz <span class="btn-label btn-label-right"><i class="fa fa-upload"></i></span></button>
+                <a href="javascript:void(0)" class="btn btn-dark" onclick="YeniOkumaParcasi()">Yeni Okuma Parçası <i class="fa fa-plus"></i></a>
+            </div>
+        </div>
+        <div class="row p-0 border-bottom border-dark" id="divNewReadingPart" style="display:none;">
+            <div class="col-12 p-2 m-1">
+                <input type="text" id="readingPartName" name="readingPartName" class="form-control" placeholder="Okuma Parçası Adı" />
+            </div>
+            <div class="col-12 p-2 m-1">
+                @*<textarea id="txtReadingPart" class="form-control" style="min-height:500px;max-height:500px;">
+                </textarea>*@
+                <div id="txtReadingPart" class="form-control" style="min-height:500px;max-height:500px;"></div>
+            </div>
+            <div class="col-12 mt-2 p-2">
+                <a href="javascript:void(0)" class="btn btn-warning" onclick="OkumaParcasiKaydet()"><i class="fa fa-save"> Kaydet</i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-right">
+                    <select id="readPartCategory" class="form-control col-3">
+                        <option value="-1">Seçiniz</option>
+                        <option value="SixMinutes">6 Minutes</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="fileAnalyzeUploadResult">
+
+</div>
+<span id="fileName">
+
+</span>
+
+<script>
+    $(document).ready(function () {
+        $("#btnUploadFile").click(function () {
+            $('#FileUploadForAnalyze').trigger('click');
+        });
+
+        $("#FileUploadForAnalyze").change(function () {
+            readURLForFileAnalyze(this);
+        });
+    });
+
+    function YeniOkumaParcasi() {
+        $("#divNewReadingPart").slideToggle();
+    }
+
+   var toolbarOptions = [
+  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+  ['blockquote', 'code-block'],
+
+  [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+  [{ 'direction': 'rtl' }],                         // text direction
+
+  [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+  [{ 'font': [] }],
+  [{ 'align': [] }],
+
+  ['clean']                                         // remove formatting button
+];
+    var quill = new Quill('#txtReadingPart', {
+        modules: {
+            toolbar: toolbarOptions
+        },
+        theme: 'snow'
+    });
+    function logHtmlContent() {
+        console.log(quill.root.innerText);
+    }
+</script>
+
+<div class="row" id="readingPartList">
+    @Html.Partial("ReadPartGrid", Model)
+</div>
+

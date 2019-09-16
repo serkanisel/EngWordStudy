@@ -1,0 +1,46 @@
+﻿@model List<EWS.Model.EWSWord>
+
+<div class="bg-info rounded">
+    <div class="row">
+        <div class="col-6">
+            <h5 class="m-2 p-2 text-white">Bulunan Kelimeler</h5>
+        </div>
+        <div class="col-6 text-right">
+            <button type="button" class="btn btn-secondary" data-dismiss="alert" aria-label="Close" onclick="$('#searchResult').slideUp();">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="row">
+        @{
+            foreach (var item in Model)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="bg-secondary m-1 rounded">
+                        @Html.Partial("SearchWord", item)
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+    @if (Model != null && Model.Count == 0)
+    {
+        <div class="row p-3 col-12">
+            <span>&nbsp;&nbsp;Kelime bulunamadı eklemek için <a href="javascript:void(0)" class="btn btn-info btn-sm" onclick="bulunamayanKelimeyiEkle()">tıklayınız.</a></span>
+        </div>
+    }
+
+    <div class="row">
+        @Html.Partial("../EWSWords/DivNewWord")
+    </div>
+
+</div>
+
+<script>
+    function bulunamayanKelimeyiEkle() {
+        WordDoesntExists();
+    }
+</script>

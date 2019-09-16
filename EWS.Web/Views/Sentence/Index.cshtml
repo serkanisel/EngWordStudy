@@ -1,0 +1,30 @@
+﻿<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="pills-list-tab" data-toggle="pill" href="#random" role="tab" aria-controls="pills-random" aria-selected="true">Yeni Cümle</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-list-tab" data-toggle="pill" href="#list" role="tab" aria-controls="pills-list" aria-selected="false" onclick="AllSentences()">Tüm Liste</a>
+    </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="random" role="tabpanel" aria-labelledby="pills-random-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 m-1">
+                    <input type="text" class="form-control" id="txtSentenceBody" placeholder="Cümle" />
+                </div>
+                <div class="col-12 m-1">
+                    <input type="text" class="form-control" id="txtSenteceMean" placeholder="Anlamı" />
+                </div>
+                <div class="col-12 text-right">
+                    <a href="javascript:void(0)" id="btnYeniCumle" onclick="yeniCumleKaydet('sentenceResultDiv')" class="btn btn-warning"><i class="fa fa-save"></i> Kaydet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="pills-list-tab">...</div>
+</div>
+
+<div id="sentenceResultDiv">
+
+</div>

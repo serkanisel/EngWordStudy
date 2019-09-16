@@ -1,0 +1,15 @@
+D:\My Projects\EWS\EWS.Model\bin\Release\EWS.Model.dll.config
+D:\My Projects\EWS\EWS.Model\bin\Release\EWS.Model.dll
+D:\My Projects\EWS\EWS.Model\bin\Release\EWS.Model.pdb
+D:\My Projects\EWS\EWS.Model\bin\Release\EntityFramework.dll
+D:\My Projects\EWS\EWS.Model\bin\Release\EntityFramework.SqlServer.dll
+D:\My Projects\EWS\EWS.Model\bin\Release\EWS.Entity.dll
+D:\My Projects\EWS\EWS.Model\bin\Release\EWS.Entity.pdb
+D:\My Projects\EWS\EWS.Model\bin\Release\EWS.Entity.dll.config
+D:\My Projects\EWS\EWS.Model\bin\Release\EntityFramework.xml
+D:\My Projects\EWS\EWS.Model\bin\Release\EntityFramework.SqlServer.xml
+D:\My Projects\EWS\EWS.Model\obj\Release\EWS.Model.csprojAssemblyReference.cache
+D:\My Projects\EWS\EWS.Model\obj\Release\EWS.Model.csproj.CoreCompileInputs.cache
+D:\My Projects\EWS\EWS.Model\obj\Release\EWS.Model.csproj.CopyComplete
+D:\My Projects\EWS\EWS.Model\obj\Release\EWS.Model.dll
+D:\My Projects\EWS\EWS.Model\obj\Release\EWS.Model.pdb

@@ -1,0 +1,57 @@
+﻿@model List<EWS.Model.EWSLearnList>
+
+@foreach (var item in Model)
+{
+        <div class="col-md-3" style="padding:1px;">
+            <div class="containerEffect border2">
+                <div class="textmain">
+                    <div class="row">
+                        <h5 data-toggle="tooltip" data-placement="top" title="Tooltip on top">@item.EWSList.Name</h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width:@if (item.EWSList.EWSListKnown != null) { @item.EWSList.EWSListKnown.Count() } else { string sifir = "0";@sifir }%;" aria-valuenow="@if (item.EWSList.EWSListKnown != null) { @item.EWSList.EWSListKnown.Count } else { string sifir = "0";@sifir }" aria-valuemin="0" aria-valuemax="100">
+                                    @if (item.EWSList.EWSListKnown != null)
+                                    { @item.EWSList.EWSListKnown.Count() }
+                                    else
+                                    {
+                                        string sifir = "0";@sifir }%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <span class="smallSpan" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                <i class="fa fa-check"></i> @if (item.EWSList.EWSListKnown!= null)
+                                { @item.EWSList.EWSListKnown.Count }
+                                else
+                                {
+                                    string sifir = "0";@sifir }% Biliyorum
+                            </span>
+                        </div>
+                        <div class="col-3">
+                            <span class="smallSpan">
+                                <i class="fa fa-question"></i>@if (item.EWSList.EWSListWillLearn!= null)
+                                { @item.EWSList.EWSListWillLearn.Count() }
+                                else
+                                {
+                                    string sifir = "0";@sifir }%  Öğreneceğim
+                            </span>
+                        </div>
+                        <div class="col-3">
+                            <span class="smallSpan"><i class="fa fa-question"></i> @item.EWSList.EWSListWord.Count Toplamı</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="text">
+                        <a href="@Url.Action("ListDetail","EWSLists", new { listID=@item.UN })" class="btn btn-warning btn-sm"><i class="fa fa-crosshairs" aria-hidden="true"></i> Seç</a>
+                        @*<a href="@Url.Action("ListDetail","EWSLists", new { listID=@item.ID })" class="btn btn-warning btn-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i> Öğrenme Listeme Ekle</a>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+}
+
+

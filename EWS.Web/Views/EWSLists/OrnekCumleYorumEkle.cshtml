@@ -1,0 +1,72 @@
+﻿<div class="row mb-2">
+    <h5>Örnek Cümleler</h5>
+    <div id="yorumEkle" class="bg-light borderRadius5 col-12 collapse">
+        <div class="row p-1">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <textarea id="txtComment" class="form-control" placeholder="örnek cümle/açıklama" />
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <textarea id="txtCommentMean" class="form-control" placeholder="örnek cümle/açıklama anlamı" />
+            </div>
+        </div>
+        <div class="row mt-3 mb-3">
+            <div class="col-12 text-right">
+                <a href="javascript:void(0)" id="btnCommentSave" class="btn btn-secondary"><i class="fa fa-save"></i> Kaydet</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="wordSample">
+
+</div>
+
+<script>
+    $("#btnCommentSave").click(function myfunction() {
+        saveComment();
+    });
+
+    $("#btnAddComment").click(function myfunction() {
+        $("#yorumEkle").slideToggle();
+    });
+
+     function saveComment() {
+        var wordID = $("#wordID").val();
+        var comment = $("#txtComment").val();
+        var commentMean = $("#txtCommentMean").val();
+
+        if (comment == "") {
+            Message("Lütfen Açıklama/Örnek Cümle Giriniz", "error");
+            return;
+        }
+
+        $.ajax({
+            url: '@Url.Action("SaveComment", "EWSWords")',
+            type: 'POST',
+            data: { wordID: wordID, comment: comment, commentMean: commentMean },
+            async: false,
+            success: function (text, data) {
+                $("#wordSample").html(text);
+                $("#txtComment").val("");
+                $("#txtCommentMean").val("");
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+            }
+        });
+    }
+
+    function DeleteComment(ID) {
+         var wordID = $("#wordID").val();
+
+         $.ajax({
+            url: '@Url.Action("DeleteComment", "EWSWords")',
+            type: 'POST',
+            data: { ID : ID},
+            async: false,
+            success: function (text, data) {
+                GetSampleSentences(wordID,"wordSample")
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+            }
+        });
+     }
+</script>

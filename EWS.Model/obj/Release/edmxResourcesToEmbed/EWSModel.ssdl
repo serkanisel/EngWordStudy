@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EWS.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EWSKnownWords">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="WordUN" Type="uniqueidentifier" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="EWSLearnList">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ListUN" Type="uniqueidentifier" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="EWSList">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="State" Type="smallint" />
+  </EntityType>
+  <EntityType Name="EWSListWord">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ListUN" Type="uniqueidentifier" />
+    <Property Name="WordUN" Type="uniqueidentifier" />
+    <Property Name="isPublic" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EWSReadPart">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ReadPart" Type="text" />
+    <Property Name="ListUN" Type="uniqueidentifier" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="EWSSampleSentence">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Sentence" Type="varchar(max)" />
+    <Property Name="WordUN" Type="uniqueidentifier" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="SentenceMean" Type="varchar(max)" />
+    <Property Name="ListUN" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="EWSUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Surname" Type="varchar" MaxLength="100" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EWSWillLearn">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="WordUN" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="EWSWord">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="WordBody" Type="varchar" MaxLength="255" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="AddType" Type="int" />
+  </EntityType>
+  <Association Name="FK_EWSLearnList_EWSList">
+    <End Role="EWSList" Type="Self.EWSList" Multiplicity="0..1" />
+    <End Role="EWSLearnList" Type="Self.EWSLearnList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSList">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSLearnList">
+        <PropertyRef Name="ListUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSLearnList_EWSUser">
+    <End Role="EWSUser" Type="Self.EWSUser" Multiplicity="0..1" />
+    <End Role="EWSLearnList" Type="Self.EWSLearnList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EWSLearnList">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSList_EWSUser">
+    <End Role="EWSUser" Type="Self.EWSUser" Multiplicity="0..1" />
+    <End Role="EWSList" Type="Self.EWSList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EWSList">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSListKnown_EWSUser">
+    <End Role="EWSUser" Type="Self.EWSUser" Multiplicity="0..1" />
+    <End Role="EWSKnownWords" Type="Self.EWSKnownWords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EWSKnownWords">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSListKnown_EWSWord">
+    <End Role="EWSWord" Type="Self.EWSWord" Multiplicity="0..1" />
+    <End Role="EWSKnownWords" Type="Self.EWSKnownWords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSWord">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSKnownWords">
+        <PropertyRef Name="WordUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSListWord_EWSList">
+    <End Role="EWSList" Type="Self.EWSList" Multiplicity="0..1" />
+    <End Role="EWSListWord" Type="Self.EWSListWord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSList">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSListWord">
+        <PropertyRef Name="ListUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSListWord_EWSWord">
+    <End Role="EWSWord" Type="Self.EWSWord" Multiplicity="0..1" />
+    <End Role="EWSListWord" Type="Self.EWSListWord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSWord">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSListWord">
+        <PropertyRef Name="WordUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSReadPart_EWSReadPart">
+    <End Role="EWSList" Type="Self.EWSList" Multiplicity="0..1" />
+    <End Role="EWSReadPart" Type="Self.EWSReadPart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSList">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSReadPart">
+        <PropertyRef Name="ListUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSReadPart_EWSUser">
+    <End Role="EWSUser" Type="Self.EWSUser" Multiplicity="1" />
+    <End Role="EWSReadPart" Type="Self.EWSReadPart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EWSReadPart">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSSampleSentence_EWSList">
+    <End Role="EWSList" Type="Self.EWSList" Multiplicity="0..1" />
+    <End Role="EWSSampleSentence" Type="Self.EWSSampleSentence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSList">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSSampleSentence">
+        <PropertyRef Name="ListUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSSampleSentence_EWSUser">
+    <End Role="EWSUser" Type="Self.EWSUser" Multiplicity="0..1" />
+    <End Role="EWSSampleSentence" Type="Self.EWSSampleSentence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EWSSampleSentence">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSSampleSentence_EWSWord">
+    <End Role="EWSWord" Type="Self.EWSWord" Multiplicity="0..1" />
+    <End Role="EWSSampleSentence" Type="Self.EWSSampleSentence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSWord">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSSampleSentence">
+        <PropertyRef Name="WordUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Word_User">
+    <End Role="EWSUser" Type="Self.EWSUser" Multiplicity="0..1" />
+    <End Role="EWSWord" Type="Self.EWSWord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EWSWord">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EWSModelStoreContainer">
+    <EntitySet Name="EWSKnownWords" EntityType="Self.EWSKnownWords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSLearnList" EntityType="Self.EWSLearnList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSList" EntityType="Self.EWSList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSListWord" EntityType="Self.EWSListWord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSReadPart" EntityType="Self.EWSReadPart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSSampleSentence" EntityType="Self.EWSSampleSentence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSUser" EntityType="Self.EWSUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSWillLearn" EntityType="Self.EWSWillLearn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSWord" EntityType="Self.EWSWord" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_EWSLearnList_EWSList" Association="Self.FK_EWSLearnList_EWSList">
+      <End Role="EWSList" EntitySet="EWSList" />
+      <End Role="EWSLearnList" EntitySet="EWSLearnList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSLearnList_EWSUser" Association="Self.FK_EWSLearnList_EWSUser">
+      <End Role="EWSUser" EntitySet="EWSUser" />
+      <End Role="EWSLearnList" EntitySet="EWSLearnList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSList_EWSUser" Association="Self.FK_EWSList_EWSUser">
+      <End Role="EWSUser" EntitySet="EWSUser" />
+      <End Role="EWSList" EntitySet="EWSList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSListKnown_EWSUser" Association="Self.FK_EWSListKnown_EWSUser">
+      <End Role="EWSUser" EntitySet="EWSUser" />
+      <End Role="EWSKnownWords" EntitySet="EWSKnownWords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSListKnown_EWSWord" Association="Self.FK_EWSListKnown_EWSWord">
+      <End Role="EWSWord" EntitySet="EWSWord" />
+      <End Role="EWSKnownWords" EntitySet="EWSKnownWords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSListWord_EWSList" Association="Self.FK_EWSListWord_EWSList">
+      <End Role="EWSList" EntitySet="EWSList" />
+      <End Role="EWSListWord" EntitySet="EWSListWord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSListWord_EWSWord" Association="Self.FK_EWSListWord_EWSWord">
+      <End Role="EWSWord" EntitySet="EWSWord" />
+      <End Role="EWSListWord" EntitySet="EWSListWord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSReadPart_EWSReadPart" Association="Self.FK_EWSReadPart_EWSReadPart">
+      <End Role="EWSList" EntitySet="EWSList" />
+      <End Role="EWSReadPart" EntitySet="EWSReadPart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSReadPart_EWSUser" Association="Self.FK_EWSReadPart_EWSUser">
+      <End Role="EWSUser" EntitySet="EWSUser" />
+      <End Role="EWSReadPart" EntitySet="EWSReadPart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSSampleSentence_EWSList" Association="Self.FK_EWSSampleSentence_EWSList">
+      <End Role="EWSList" EntitySet="EWSList" />
+      <End Role="EWSSampleSentence" EntitySet="EWSSampleSentence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSSampleSentence_EWSUser" Association="Self.FK_EWSSampleSentence_EWSUser">
+      <End Role="EWSUser" EntitySet="EWSUser" />
+      <End Role="EWSSampleSentence" EntitySet="EWSSampleSentence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSSampleSentence_EWSWord" Association="Self.FK_EWSSampleSentence_EWSWord">
+      <End Role="EWSWord" EntitySet="EWSWord" />
+      <End Role="EWSSampleSentence" EntitySet="EWSSampleSentence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Word_User" Association="Self.FK_Word_User">
+      <End Role="EWSUser" EntitySet="EWSUser" />
+      <End Role="EWSWord" EntitySet="EWSWord" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

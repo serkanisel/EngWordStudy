@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EWSModelStoreContainer" CdmEntityContainer="EWSContext">
+    <EntitySetMapping Name="EWSKnownWords">
+      <EntityTypeMapping TypeName="EWS.Model.EWSKnownWords">
+        <MappingFragment StoreEntitySet="EWSKnownWords">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="WordUN" ColumnName="WordUN" />
+          <ScalarProperty Name="UN" ColumnName="UN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWSLearnList">
+      <EntityTypeMapping TypeName="EWS.Model.EWSLearnList">
+        <MappingFragment StoreEntitySet="EWSLearnList">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ListUN" ColumnName="ListUN" />
+          <ScalarProperty Name="UN" ColumnName="UN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWSList">
+      <EntityTypeMapping TypeName="EWS.Model.EWSList">
+        <MappingFragment StoreEntitySet="EWSList">
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UN" ColumnName="UN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWSListWord">
+      <EntityTypeMapping TypeName="EWS.Model.EWSListWord">
+        <MappingFragment StoreEntitySet="EWSListWord">
+          <ScalarProperty Name="isPublic" ColumnName="isPublic" />
+          <ScalarProperty Name="WordUN" ColumnName="WordUN" />
+          <ScalarProperty Name="ListUN" ColumnName="ListUN" />
+          <ScalarProperty Name="UN" ColumnName="UN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWSReadPart">
+      <EntityTypeMapping TypeName="EWS.Model.EWSReadPart">
+        <MappingFragment StoreEntitySet="EWSReadPart">
+          <ScalarProperty Name="ReadPartHtml" ColumnName="ReadPartHtml" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ListUN" ColumnName="ListUN" />
+          <ScalarProperty Name="ReadPart" ColumnName="ReadPart" />
+          <ScalarProperty Name="UN" ColumnName="UN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWSSampleSentence">
+      <EntityTypeMapping TypeName="EWS.Model.EWSSampleSentence">
+        <MappingFragment StoreEntitySet="EWSSampleSentence">
+          <ScalarProperty Name="ListUN" ColumnName="ListUN" />
+          <ScalarProperty Name="SentenceMean" ColumnName="SentenceMean" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="WordUN" ColumnName="WordUN" />
+          <ScalarProperty Name="Sentence" ColumnName="Sentence" />
+          <ScalarProperty Name="UN" ColumnName="UN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWSUser">
+      <EntityTypeMapping TypeName="EWS.Model.EWSUser">
+        <MappingFragment StoreEntitySet="EWSUser">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWSWord">
+      <EntityTypeMapping TypeName="EWS.Model.EWSWord">
+        <MappingFragment StoreEntitySet="EWSWord">
+          <ScalarProperty Name="AddType" ColumnName="AddType" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="WordBody" ColumnName="WordBody" />
+          <ScalarProperty Name="UN" ColumnName="UN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWSWillLearn">
+      <EntityTypeMapping TypeName="EWS.Model.EWSWillLearn">
+        <MappingFragment StoreEntitySet="EWSWillLearn">
+          <ScalarProperty Name="WordUN" ColumnName="WordUN" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UN" ColumnName="UN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWSReadingPartCategory">
+      <EntityTypeMapping TypeName="EWS.Model.EWSReadingPartCategory">
+        <MappingFragment StoreEntitySet="EWSReadingPartCategory">
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="UN" ColumnName="UN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

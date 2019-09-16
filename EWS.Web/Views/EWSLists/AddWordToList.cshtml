@@ -1,0 +1,61 @@
+﻿@model EWS.Model.EWSList
+
+@using EWS.Web.Helpers
+
+@*<ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","EWSLists")">Listeler</a></li>
+        <li class="breadcrumb-item active"><b>@Model.Name</b></li>
+    </ol>*@
+<input type="hidden" id="listUN" value="@Model.UN" />
+<div class="container p-0">
+    <div class="row p-0 pb-1 pt-1 mb-2 border-bottom border-dark">
+        <div class="col-md-8 col-sm-12">
+            @*@Html._EWSDropdown("EWSList", "", false, "", "", "Lookup/GetEWSLists?userID=" + Model.UserID.ToString(), "UN", "Name", modelValue: Model.UN, secinizEkle: false, style: "height:40px;font-weight:bold;")*@
+            <h4>@Model.Name</h4>
+        </div>
+        <div class="col-md-4 col-sm-12 text-right">
+            <a href="@Url.Action("Index","EWSLists")" class="btn btn-dark"><i class="fa fa-backward"></i> <span class="hidden-sm-down">Listeye Dön</span></a>
+        </div>
+    </div>
+
+    <div class="row mt-1 mb-1 pt-2 pb-2">
+        <div class="col-10 p-0 m-0">
+            <input type="text" placeholder="eklenecek kelimeyi giriniz" class="form-control" id="txtBody" />
+        </div>
+        <div class="col-2 p-0 m-0 text-right">
+            <a href="javascript:void(0)" class="btn btn-dark" id="btnAra" onclick="SearchWord()" data-toggle="tooltip" data-placement="top" title="Kelimeyi Ara"><i class="fa fa-search"></i></a>
+            <a href="javascript:void(0)" class="btn btn-dark" id="btnYeniKelime" onclick="yeniKelimeEkle()" data-toggle="tooltip" data-placement="top" title="Yeni Kelime Ekle"><i class="fa fa-plus"></i></a>
+        </div>
+    </div>
+</div>
+<div id="SearchList" class="row border-bottom border-dark pt-1 pb-1 mb-2" style="display:none;">
+
+</div>
+
+@Html.Partial("../EWSWords/DivNewWord");
+
+<div id="addWordResult">
+
+</div>
+<div class="row p-0" id="wordList">
+    @Html.Partial("../EWSWords/WordGrid", Model.EWSListWord.ToList())
+</div>
+
+<script>
+    $(function () {
+        $(document).keydown(function (e) {
+            switch (e.which) {
+                case 13: // enter key
+                    if ($("#txtBody").val() != "") {
+                        $("#btnAra").trigger("click")
+                        break;
+                    }
+            }
+        });
+    });
+
+    $("#EWSList").change(function () {
+        wordList($(this).val());
+    });
+</script>

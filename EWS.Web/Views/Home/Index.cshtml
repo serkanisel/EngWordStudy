@@ -1,0 +1,117 @@
+﻿@if (((EWS.Model.EWSUser)HttpContext.Current.Session["CurrentUser"]) == null)
+{
+    Layout = "";
+    <div class="row mx-auto">
+        <div class="col-4">
+            @Html.Partial("../Account/Login")
+        </div>
+    </div>
+}
+else
+{
+    <div class="jumbotron p-3 p-md-5 text-white rounded bg-info">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 font-italic">English Word Study</h1>
+            <p class="lead my-3"><h3>Hoşgeldiniz ,<span class="text-warning"> @{ string name = ((EWS.Model.EWSUser)Session["CurrentUser"]).Name + " " + ((EWS.Model.EWSUser)Session["CurrentUser"]).Surname;  } @name</span></h3></p>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        @*<div class="col-3 bg-dark">
+            <a class="dropdown-item" href="@Url.Action("Index","EWSlists")"><i class="fa fa-users" aria-hidden="true"></i> Listeler</a>
+            <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i> Kelimeler</a>
+            @*<a class="dropdown-item" href="@Url.Action("AnalyzeFiles","EWSFile")"><i class="fa fa-file" aria-hidden="true"></i> Dosya Analiz</a>
+            <a class="dropdown-item" href="@Url.Action("Index","EWSFile")"><i class="fa fa-book" aria-hidden="true"></i> Sözlük Upload</a>
+            <a class="dropdown-item" href="@Url.Action("Index","ReadingPart")"><i class="fa fa-book" aria-hidden="true"></i> Okuma Parçaları</a>
+        </div>*@
+        <div class="col-md-4 col-sm-12 p-0 ">
+            <div class="row m-1 p-2  indexBody bg-light">
+                <h2>Listeler</h2>
+                <p>Sistemdeki listeleri çalışabilir veya kendi listenizi oluşturabilirsiniz.</p>
+                <div class="overlay">
+                    <div class="text">
+                        <a class="btn btn-warning" href="@Url.Action("Index","EWSlists")" role="button">Listelere Git <i class="fa fa-sign-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 col-sm-12 p-0 ">
+            <div class="row  m-1 p-2  indexBody bg-light">
+                <h2>Kelimeler</h2>
+                <p>Sistemdeki kelimeleri analiz edebilir veya kendi kelimelerinizi oluşturabilirsiniz.</p>
+                <div class="overlay">
+                    <div class="text">
+                        <a class="btn btn-warning" href="@Url.Action("Index","EWSWords")" role="button">Kelimelere Git <i class="fa fa-sign-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 col-sm-12 p-0 ">
+            <div class="row m-1 p-2  indexBody bg-light">
+                <h2>Okuma Parçaları</h2>
+                <p>Sistemdeki okuma parçalarını çalışabilir veya kendi okuma parçalarınızı oluşturabilirsiniz.</p>
+                <div class="overlay">
+                    <div class="text">
+                        <a class="btn btn-warning" href="@Url.Action("Index","ReadingPart")" role="button">Okuma Parçalarına Git <i class="fa fa-sign-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay borderRadius5">
+                <div class="text">
+                    Dana Veliiiii
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 p-0 ">
+            <div class="row m-1 p-2  indexBody bg-light">
+                <h2>Çalışma Ekranı</h2>
+                <p>Seçeceğiniz Liste üzerideki kelimeleri flash card,çoktan seçmeli,türkçeden ingilzice'ye vb. uygulamalar ile çalışabilirsiniz.</p>
+                <div class="overlay">
+                    <div class="text">
+                        <a class="btn btn-warning" href="@Url.Action("Index","StudyScreen")" role="button">Çalışma Ekranına Git<i class="fa fa-sign-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay borderRadius5">
+                <div class="text">
+                    Dana Veliiiii
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 p-0 ">
+            <div class="row m-1 p-2  indexBody bg-light">
+                <h2>Cümleler</h2>
+                <p>Sisteme yeni cümleler ekleyebilir bu cümleler üzerinde çalışabilirsiniz.</p>
+                <div class="overlay">
+                    <div class="text">
+                        <a class="btn btn-warning" href="@Url.Action("Index","Sentence")" role="button">Cümleler Ekranına Git<i class="fa fa-sign-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay borderRadius5">
+                <div class="text">
+                    Dana Veliiiii
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div class="row">
+            <div class="col-4 ewslist">
+                <div class="row">
+                    <h5>Günün Kelimesi</h5>
+                    <span></span>
+                </div>
+            </div>
+        </div>*@
+
+
+    }
+
+
+    <script>
+        $(document).ready(function () {
+            $("#fixedMenu").hide();
+        });
+    </script>

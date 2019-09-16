@@ -1,0 +1,22 @@
+﻿<h4>File Analyze</h4>
+<input type="file" id="FileUploadForAnalyze" multiple style="display:none;" />
+<button type="button" id="btnUploadFile" value="Dosya Analiz Et" class="btn btn-info">Dosya Analiz <span class="btn-label btn-label-right"><i class="fa fa-upload"></i></span></button>
+
+<div id="fileAnalyzeUploadResult">
+
+</div>
+<span id="fileName">
+
+</span>
+
+<script>
+    $(document).ready(function () {
+        $("#btnUploadFile").click(function () {
+            $('#FileUploadForAnalyze').trigger('click');
+        });
+
+        $("#FileUploadForAnalyze").change(function () {
+            readURLForFileAnalyze(this);
+        });
+    });
+</script>

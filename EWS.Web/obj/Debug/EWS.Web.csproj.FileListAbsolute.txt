@@ -1,0 +1,520 @@
+E:\projects\EWS\EWS.Web\bin\ApplicationInsights.config
+E:\projects\EWS\EWS.Web\bin\roslyn\csc.exe
+E:\projects\EWS\EWS.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\projects\EWS\EWS.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\projects\EWS\EWS.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\projects\EWS\EWS.Web\bin\roslyn\System.Collections.Immutable.dll
+E:\projects\EWS\EWS.Web\bin\roslyn\System.Reflection.Metadata.dll
+E:\projects\EWS\EWS.Web\bin\roslyn\vbc.exe
+E:\projects\EWS\EWS.Web\bin\roslyn\VBCSCompiler.exe
+E:\projects\EWS\EWS.Web\bin\roslyn\VBCSCompiler.exe.config
+E:\projects\EWS\EWS.Web\bin\EWS.Web.dll.config
+E:\projects\EWS\EWS.Web\bin\EWS.Web.dll
+E:\projects\EWS\EWS.Web\bin\EWS.Web.pdb
+E:\projects\EWS\EWS.Web\bin\Antlr3.Runtime.dll
+E:\projects\EWS\EWS.Web\bin\EntityFramework.dll
+E:\projects\EWS\EWS.Web\bin\EntityFramework.SqlServer.dll
+E:\projects\EWS\EWS.Web\bin\EWS.Business.dll
+E:\projects\EWS\EWS.Web\bin\EWS.Entity.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.AI.Agent.Intercept.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.AI.DependencyCollector.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.AI.Web.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.AI.WindowsServer.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.ApplicationInsights.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Core.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Cookies.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Facebook.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Google.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.OAuth.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Twitter.dll
+E:\projects\EWS\EWS.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\projects\EWS\EWS.Web\bin\Newtonsoft.Json.dll
+E:\projects\EWS\EWS.Web\bin\Owin.dll
+E:\projects\EWS\EWS.Web\bin\System.Net.Http.Formatting.dll
+E:\projects\EWS\EWS.Web\bin\System.Web.Helpers.dll
+E:\projects\EWS\EWS.Web\bin\System.Web.Http.dll
+E:\projects\EWS\EWS.Web\bin\System.Web.Http.WebHost.dll
+E:\projects\EWS\EWS.Web\bin\System.Web.Mvc.dll
+E:\projects\EWS\EWS.Web\bin\System.Web.Optimization.dll
+E:\projects\EWS\EWS.Web\bin\System.Web.Razor.dll
+E:\projects\EWS\EWS.Web\bin\System.Web.WebPages.Deployment.dll
+E:\projects\EWS\EWS.Web\bin\System.Web.WebPages.dll
+E:\projects\EWS\EWS.Web\bin\System.Web.WebPages.Razor.dll
+E:\projects\EWS\EWS.Web\bin\WebGrease.dll
+E:\projects\EWS\EWS.Web\bin\EWS.Repository.dll
+E:\projects\EWS\EWS.Web\bin\EWS.Model.dll
+E:\projects\EWS\EWS.Web\bin\EWS.Business.pdb
+E:\projects\EWS\EWS.Web\bin\EWS.Entity.pdb
+E:\projects\EWS\EWS.Web\bin\Microsoft.AI.DependencyCollector.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.AI.Web.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.AI.WindowsServer.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.ApplicationInsights.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\projects\EWS\EWS.Web\bin\System.Web.Helpers.xml
+E:\projects\EWS\EWS.Web\bin\System.Web.Mvc.xml
+E:\projects\EWS\EWS.Web\bin\System.Web.Optimization.xml
+E:\projects\EWS\EWS.Web\bin\System.Web.Razor.xml
+E:\projects\EWS\EWS.Web\bin\System.Web.WebPages.xml
+E:\projects\EWS\EWS.Web\bin\System.Web.WebPages.Deployment.xml
+E:\projects\EWS\EWS.Web\bin\System.Web.WebPages.Razor.xml
+E:\projects\EWS\EWS.Web\bin\Antlr3.Runtime.pdb
+E:\projects\EWS\EWS.Web\bin\Newtonsoft.Json.xml
+E:\projects\EWS\EWS.Web\bin\System.Net.Http.Formatting.xml
+E:\projects\EWS\EWS.Web\bin\System.Web.Http.xml
+E:\projects\EWS\EWS.Web\bin\System.Web.Http.WebHost.xml
+E:\projects\EWS\EWS.Web\bin\EntityFramework.xml
+E:\projects\EWS\EWS.Web\bin\EntityFramework.SqlServer.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Core.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Facebook.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Cookies.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.OAuth.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Google.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Twitter.xml
+E:\projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\projects\EWS\EWS.Web\bin\EWS.Repository.pdb
+E:\projects\EWS\EWS.Web\bin\EWS.Model.pdb
+E:\projects\EWS\EWS.Web\obj\Debug\EWS.Web.csprojResolveAssemblyReference.cache
+E:\projects\EWS\EWS.Web\obj\Debug\EWS.Web.dll
+E:\projects\EWS\EWS.Web\obj\Debug\EWS.Web.pdb
+D:\Projects\EWS\EWS.Web\obj\Debug\EWS.Web.csprojResolveAssemblyReference.cache
+D:\Projects\EWS\EWS.Web\bin\ApplicationInsights.config
+D:\Projects\EWS\EWS.Web\bin\roslyn\csc.exe
+D:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\EWS\EWS.Web\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\EWS\EWS.Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\EWS\EWS.Web\bin\roslyn\vbc.exe
+D:\Projects\EWS\EWS.Web\bin\roslyn\VBCSCompiler.exe
+D:\Projects\EWS\EWS.Web\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\EWS\EWS.Web\bin\EWS.Web.dll.config
+D:\Projects\EWS\EWS.Web\bin\EWS.Web.dll
+D:\Projects\EWS\EWS.Web\bin\EWS.Web.pdb
+D:\Projects\EWS\EWS.Web\bin\Antlr3.Runtime.dll
+D:\Projects\EWS\EWS.Web\bin\EntityFramework.dll
+D:\Projects\EWS\EWS.Web\bin\EntityFramework.SqlServer.dll
+D:\Projects\EWS\EWS.Web\bin\EWS.Business.dll
+D:\Projects\EWS\EWS.Web\bin\EWS.Entity.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AI.DependencyCollector.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AI.Web.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AI.WindowsServer.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.ApplicationInsights.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\EWS\EWS.Web\bin\Newtonsoft.Json.dll
+D:\Projects\EWS\EWS.Web\bin\Owin.dll
+D:\Projects\EWS\EWS.Web\bin\System.Net.Http.Formatting.dll
+D:\Projects\EWS\EWS.Web\bin\System.Web.Helpers.dll
+D:\Projects\EWS\EWS.Web\bin\System.Web.Http.dll
+D:\Projects\EWS\EWS.Web\bin\System.Web.Http.WebHost.dll
+D:\Projects\EWS\EWS.Web\bin\System.Web.Mvc.dll
+D:\Projects\EWS\EWS.Web\bin\System.Web.Optimization.dll
+D:\Projects\EWS\EWS.Web\bin\System.Web.Razor.dll
+D:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.dll
+D:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.Razor.dll
+D:\Projects\EWS\EWS.Web\bin\WebGrease.dll
+D:\Projects\EWS\EWS.Web\bin\EWS.Repository.dll
+D:\Projects\EWS\EWS.Web\bin\EWS.Model.dll
+D:\Projects\EWS\EWS.Web\bin\EWS.Business.pdb
+D:\Projects\EWS\EWS.Web\bin\EWS.Entity.pdb
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AI.DependencyCollector.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AI.Web.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AI.WindowsServer.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.ApplicationInsights.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\EWS\EWS.Web\bin\System.Web.Helpers.xml
+D:\Projects\EWS\EWS.Web\bin\System.Web.Mvc.xml
+D:\Projects\EWS\EWS.Web\bin\System.Web.Optimization.xml
+D:\Projects\EWS\EWS.Web\bin\System.Web.Razor.xml
+D:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.xml
+D:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.Razor.xml
+D:\Projects\EWS\EWS.Web\bin\Antlr3.Runtime.pdb
+D:\Projects\EWS\EWS.Web\bin\Newtonsoft.Json.xml
+D:\Projects\EWS\EWS.Web\bin\System.Net.Http.Formatting.xml
+D:\Projects\EWS\EWS.Web\bin\System.Web.Http.xml
+D:\Projects\EWS\EWS.Web\bin\System.Web.Http.WebHost.xml
+D:\Projects\EWS\EWS.Web\bin\EntityFramework.xml
+D:\Projects\EWS\EWS.Web\bin\EntityFramework.SqlServer.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Projects\EWS\EWS.Web\bin\EWS.Repository.pdb
+D:\Projects\EWS\EWS.Web\bin\EWS.Model.pdb
+D:\Projects\EWS\EWS.Web\obj\Debug\EWS.Web.dll
+D:\Projects\EWS\EWS.Web\obj\Debug\EWS.Web.pdb
+C:\Projects\EWS\EWS.Web\bin\ApplicationInsights.config
+C:\Projects\EWS\EWS.Web\bin\roslyn\csc.exe
+C:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Projects\EWS\EWS.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projects\EWS\EWS.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Projects\EWS\EWS.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Projects\EWS\EWS.Web\bin\roslyn\vbc.exe
+C:\Projects\EWS\EWS.Web\bin\roslyn\VBCSCompiler.exe
+C:\Projects\EWS\EWS.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Projects\EWS\EWS.Web\bin\EWS.Web.dll.config
+C:\Projects\EWS\EWS.Web\bin\EWS.Web.dll
+C:\Projects\EWS\EWS.Web\bin\EWS.Web.pdb
+C:\Projects\EWS\EWS.Web\bin\Antlr3.Runtime.dll
+C:\Projects\EWS\EWS.Web\bin\EntityFramework.dll
+C:\Projects\EWS\EWS.Web\bin\EntityFramework.SqlServer.dll
+C:\Projects\EWS\EWS.Web\bin\EWS.Business.dll
+C:\Projects\EWS\EWS.Web\bin\EWS.Entity.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AI.Web.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AI.WindowsServer.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.ApplicationInsights.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\EWS\EWS.Web\bin\Newtonsoft.Json.dll
+C:\Projects\EWS\EWS.Web\bin\Owin.dll
+C:\Projects\EWS\EWS.Web\bin\System.Net.Http.Formatting.dll
+C:\Projects\EWS\EWS.Web\bin\System.Web.Helpers.dll
+C:\Projects\EWS\EWS.Web\bin\System.Web.Http.dll
+C:\Projects\EWS\EWS.Web\bin\System.Web.Http.WebHost.dll
+C:\Projects\EWS\EWS.Web\bin\System.Web.Mvc.dll
+C:\Projects\EWS\EWS.Web\bin\System.Web.Optimization.dll
+C:\Projects\EWS\EWS.Web\bin\System.Web.Razor.dll
+C:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.dll
+C:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.Razor.dll
+C:\Projects\EWS\EWS.Web\bin\WebGrease.dll
+C:\Projects\EWS\EWS.Web\bin\EWS.Repository.dll
+C:\Projects\EWS\EWS.Web\bin\EWS.Model.dll
+C:\Projects\EWS\EWS.Web\bin\EWS.Business.pdb
+C:\Projects\EWS\EWS.Web\bin\EWS.Entity.pdb
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AI.Web.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AI.WindowsServer.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.ApplicationInsights.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projects\EWS\EWS.Web\bin\System.Web.Helpers.xml
+C:\Projects\EWS\EWS.Web\bin\System.Web.Mvc.xml
+C:\Projects\EWS\EWS.Web\bin\System.Web.Optimization.xml
+C:\Projects\EWS\EWS.Web\bin\System.Web.Razor.xml
+C:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.xml
+C:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\EWS\EWS.Web\bin\System.Web.WebPages.Razor.xml
+C:\Projects\EWS\EWS.Web\bin\Antlr3.Runtime.pdb
+C:\Projects\EWS\EWS.Web\bin\Newtonsoft.Json.xml
+C:\Projects\EWS\EWS.Web\bin\System.Net.Http.Formatting.xml
+C:\Projects\EWS\EWS.Web\bin\System.Web.Http.xml
+C:\Projects\EWS\EWS.Web\bin\System.Web.Http.WebHost.xml
+C:\Projects\EWS\EWS.Web\bin\EntityFramework.xml
+C:\Projects\EWS\EWS.Web\bin\EntityFramework.SqlServer.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Projects\EWS\EWS.Web\bin\EWS.Repository.pdb
+C:\Projects\EWS\EWS.Web\bin\EWS.Model.pdb
+C:\Projects\EWS\EWS.Web\obj\Debug\EWS.Web.csprojResolveAssemblyReference.cache
+C:\Projects\EWS\EWS.Web\obj\Debug\EWS.Web.dll
+C:\Projects\EWS\EWS.Web\obj\Debug\EWS.Web.pdb
+C:\Projects\EWS\EWS.Web\bin\EWS.Entity.dll.config
+C:\Projects\EWS\EWS.Web\bin\EWS.Repository.dll.config
+C:\Projects\EWS\EWS.Web\bin\EWS.Model.dll.config
+C:\Projects\EWS\EWS.Web\bin\PagedList.dll
+C:\Projects\EWS\EWS.Web\bin\PagedList.Mvc.dll
+C:\Projects\EWS\EWS.Web\bin\PagedList.xml
+C:\Projects\EWS\EWS.Web\bin\PagedList.Mvc.xml
+C:\Projects\EWS\EWS.Web\bin\EPPlus.dll
+C:\Projects\EWS\EWS.Web\bin\EPPlus.xml
+E:\Projects\EWS\EWS.Web\bin\EPPlus.dll
+E:\Projects\EWS\EWS.Web\bin\PagedList.dll
+E:\Projects\EWS\EWS.Web\bin\PagedList.Mvc.dll
+E:\Projects\EWS\EWS.Web\bin\EWS.Entity.dll.config
+E:\Projects\EWS\EWS.Web\bin\EPPlus.xml
+E:\Projects\EWS\EWS.Web\bin\PagedList.xml
+E:\Projects\EWS\EWS.Web\bin\PagedList.Mvc.xml
+E:\Projects\EWS\EWS.Web\bin\EWS.Repository.dll.config
+E:\Projects\EWS\EWS.Web\bin\EWS.Model.dll.config
+C:\sisel\EWS\EWS.Web\bin\ApplicationInsights.config
+C:\sisel\EWS\EWS.Web\bin\roslyn\csc.exe
+C:\sisel\EWS\EWS.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\sisel\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\sisel\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\sisel\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\sisel\EWS\EWS.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\sisel\EWS\EWS.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\sisel\EWS\EWS.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\sisel\EWS\EWS.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\sisel\EWS\EWS.Web\bin\roslyn\vbc.exe
+C:\sisel\EWS\EWS.Web\bin\roslyn\VBCSCompiler.exe
+C:\sisel\EWS\EWS.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\sisel\EWS\EWS.Web\bin\EWS.Web.dll.config
+C:\sisel\EWS\EWS.Web\bin\EWS.Web.dll
+C:\sisel\EWS\EWS.Web\bin\EWS.Web.pdb
+C:\sisel\EWS\EWS.Web\bin\Antlr3.Runtime.dll
+C:\sisel\EWS\EWS.Web\bin\EntityFramework.dll
+C:\sisel\EWS\EWS.Web\bin\EntityFramework.SqlServer.dll
+C:\sisel\EWS\EWS.Web\bin\EPPlus.dll
+C:\sisel\EWS\EWS.Web\bin\EWS.Business.dll
+C:\sisel\EWS\EWS.Web\bin\EWS.Entity.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AI.Web.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AI.WindowsServer.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.ApplicationInsights.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\sisel\EWS\EWS.Web\bin\Newtonsoft.Json.dll
+C:\sisel\EWS\EWS.Web\bin\Owin.dll
+C:\sisel\EWS\EWS.Web\bin\PagedList.dll
+C:\sisel\EWS\EWS.Web\bin\PagedList.Mvc.dll
+C:\sisel\EWS\EWS.Web\bin\System.Net.Http.Formatting.dll
+C:\sisel\EWS\EWS.Web\bin\System.Web.Helpers.dll
+C:\sisel\EWS\EWS.Web\bin\System.Web.Http.dll
+C:\sisel\EWS\EWS.Web\bin\System.Web.Http.WebHost.dll
+C:\sisel\EWS\EWS.Web\bin\System.Web.Mvc.dll
+C:\sisel\EWS\EWS.Web\bin\System.Web.Optimization.dll
+C:\sisel\EWS\EWS.Web\bin\System.Web.Razor.dll
+C:\sisel\EWS\EWS.Web\bin\System.Web.WebPages.Deployment.dll
+C:\sisel\EWS\EWS.Web\bin\System.Web.WebPages.dll
+C:\sisel\EWS\EWS.Web\bin\System.Web.WebPages.Razor.dll
+C:\sisel\EWS\EWS.Web\bin\WebGrease.dll
+C:\sisel\EWS\EWS.Web\bin\EWS.Repository.dll
+C:\sisel\EWS\EWS.Web\bin\EWS.Model.dll
+C:\sisel\EWS\EWS.Web\bin\EWS.Business.pdb
+C:\sisel\EWS\EWS.Web\bin\EWS.Entity.pdb
+C:\sisel\EWS\EWS.Web\bin\EWS.Entity.dll.config
+C:\sisel\EWS\EWS.Web\bin\EPPlus.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AI.Web.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AI.WindowsServer.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.ApplicationInsights.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\sisel\EWS\EWS.Web\bin\PagedList.xml
+C:\sisel\EWS\EWS.Web\bin\PagedList.Mvc.xml
+C:\sisel\EWS\EWS.Web\bin\System.Web.Helpers.xml
+C:\sisel\EWS\EWS.Web\bin\System.Web.Mvc.xml
+C:\sisel\EWS\EWS.Web\bin\System.Web.Optimization.xml
+C:\sisel\EWS\EWS.Web\bin\System.Web.Razor.xml
+C:\sisel\EWS\EWS.Web\bin\System.Web.WebPages.xml
+C:\sisel\EWS\EWS.Web\bin\System.Web.WebPages.Deployment.xml
+C:\sisel\EWS\EWS.Web\bin\System.Web.WebPages.Razor.xml
+C:\sisel\EWS\EWS.Web\bin\Antlr3.Runtime.pdb
+C:\sisel\EWS\EWS.Web\bin\Newtonsoft.Json.xml
+C:\sisel\EWS\EWS.Web\bin\System.Net.Http.Formatting.xml
+C:\sisel\EWS\EWS.Web\bin\System.Web.Http.xml
+C:\sisel\EWS\EWS.Web\bin\System.Web.Http.WebHost.xml
+C:\sisel\EWS\EWS.Web\bin\EntityFramework.xml
+C:\sisel\EWS\EWS.Web\bin\EntityFramework.SqlServer.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\sisel\EWS\EWS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\sisel\EWS\EWS.Web\bin\EWS.Repository.pdb
+C:\sisel\EWS\EWS.Web\bin\EWS.Repository.dll.config
+C:\sisel\EWS\EWS.Web\bin\EWS.Model.pdb
+C:\sisel\EWS\EWS.Web\bin\EWS.Model.dll.config
+C:\sisel\EWS\EWS.Web\obj\Debug\EWS.Web.csprojResolveAssemblyReference.cache
+C:\sisel\EWS\EWS.Web\obj\Debug\EWS.Web.csproj.CoreCompileInputs.cache
+C:\sisel\EWS\EWS.Web\obj\Debug\EWS.Web.csproj.CopyComplete
+C:\sisel\EWS\EWS.Web\obj\Debug\EWS.Web.dll
+C:\sisel\EWS\EWS.Web\obj\Debug\EWS.Web.pdb
+D:\My Projects\EWS\EWS.Web\bin\ApplicationInsights.config
+D:\My Projects\EWS\EWS.Web\bin\roslyn\csc.exe
+D:\My Projects\EWS\EWS.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\My Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\My Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\My Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\My Projects\EWS\EWS.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\My Projects\EWS\EWS.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\My Projects\EWS\EWS.Web\bin\roslyn\System.Collections.Immutable.dll
+D:\My Projects\EWS\EWS.Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\My Projects\EWS\EWS.Web\bin\roslyn\vbc.exe
+D:\My Projects\EWS\EWS.Web\bin\roslyn\VBCSCompiler.exe
+D:\My Projects\EWS\EWS.Web\bin\roslyn\VBCSCompiler.exe.config
+D:\My Projects\EWS\EWS.Web\bin\EWS.Web.dll.config
+D:\My Projects\EWS\EWS.Web\bin\EWS.Web.dll
+D:\My Projects\EWS\EWS.Web\bin\EWS.Web.pdb
+D:\My Projects\EWS\EWS.Web\bin\Antlr3.Runtime.dll
+D:\My Projects\EWS\EWS.Web\bin\EntityFramework.dll
+D:\My Projects\EWS\EWS.Web\bin\EntityFramework.SqlServer.dll
+D:\My Projects\EWS\EWS.Web\bin\EPPlus.dll
+D:\My Projects\EWS\EWS.Web\bin\EWS.Business.dll
+D:\My Projects\EWS\EWS.Web\bin\EWS.Entity.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AI.Agent.Intercept.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AI.DependencyCollector.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AI.Web.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AI.WindowsServer.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.ApplicationInsights.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\My Projects\EWS\EWS.Web\bin\Newtonsoft.Json.dll
+D:\My Projects\EWS\EWS.Web\bin\Owin.dll
+D:\My Projects\EWS\EWS.Web\bin\PagedList.dll
+D:\My Projects\EWS\EWS.Web\bin\PagedList.Mvc.dll
+D:\My Projects\EWS\EWS.Web\bin\System.Net.Http.Formatting.dll
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Helpers.dll
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Http.dll
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Http.WebHost.dll
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Mvc.dll
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Optimization.dll
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Razor.dll
+D:\My Projects\EWS\EWS.Web\bin\System.Web.WebPages.Deployment.dll
+D:\My Projects\EWS\EWS.Web\bin\System.Web.WebPages.dll
+D:\My Projects\EWS\EWS.Web\bin\System.Web.WebPages.Razor.dll
+D:\My Projects\EWS\EWS.Web\bin\WebGrease.dll
+D:\My Projects\EWS\EWS.Web\bin\EWS.Repository.dll
+D:\My Projects\EWS\EWS.Web\bin\EWS.Model.dll
+D:\My Projects\EWS\EWS.Web\bin\EWS.Business.pdb
+D:\My Projects\EWS\EWS.Web\bin\EWS.Entity.pdb
+D:\My Projects\EWS\EWS.Web\bin\EWS.Entity.dll.config
+D:\My Projects\EWS\EWS.Web\bin\EPPlus.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AI.DependencyCollector.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AI.Web.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AI.WindowsServer.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.ApplicationInsights.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\My Projects\EWS\EWS.Web\bin\PagedList.xml
+D:\My Projects\EWS\EWS.Web\bin\PagedList.Mvc.xml
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Helpers.xml
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Mvc.xml
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Optimization.xml
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Razor.xml
+D:\My Projects\EWS\EWS.Web\bin\System.Web.WebPages.xml
+D:\My Projects\EWS\EWS.Web\bin\System.Web.WebPages.Deployment.xml
+D:\My Projects\EWS\EWS.Web\bin\System.Web.WebPages.Razor.xml
+D:\My Projects\EWS\EWS.Web\bin\Antlr3.Runtime.pdb
+D:\My Projects\EWS\EWS.Web\bin\Newtonsoft.Json.xml
+D:\My Projects\EWS\EWS.Web\bin\System.Net.Http.Formatting.xml
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Http.xml
+D:\My Projects\EWS\EWS.Web\bin\System.Web.Http.WebHost.xml
+D:\My Projects\EWS\EWS.Web\bin\EntityFramework.xml
+D:\My Projects\EWS\EWS.Web\bin\EntityFramework.SqlServer.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\My Projects\EWS\EWS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\My Projects\EWS\EWS.Web\bin\EWS.Repository.pdb
+D:\My Projects\EWS\EWS.Web\bin\EWS.Repository.dll.config
+D:\My Projects\EWS\EWS.Web\bin\EWS.Model.pdb
+D:\My Projects\EWS\EWS.Web\bin\EWS.Model.dll.config
+D:\My Projects\EWS\EWS.Web\obj\Debug\EWS.Web.csprojAssemblyReference.cache
+D:\My Projects\EWS\EWS.Web\obj\Debug\EWS.Web.csproj.CoreCompileInputs.cache
+D:\My Projects\EWS\EWS.Web\obj\Debug\EWS.Web.csproj.CopyComplete
+D:\My Projects\EWS\EWS.Web\obj\Debug\EWS.Web.dll
+D:\My Projects\EWS\EWS.Web\obj\Debug\EWS.Web.pdb

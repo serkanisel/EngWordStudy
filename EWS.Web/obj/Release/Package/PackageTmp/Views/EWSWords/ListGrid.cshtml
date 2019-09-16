@@ -1,0 +1,15 @@
+﻿@model List<EWS.Model.EWSList>
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-4 col-md-3 col-sm-12 p-0">
+        <div class="row bg-light p-2 m-1">
+            <div class="col-12 p-0">
+                @item.Name
+            </div>
+            <div class="col-12 p-0">
+                <a href="javascript:void(0)" class="btn btn-dark"><i class="fa fa-minus"></i></a>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,248 @@
+﻿@model EWS.Model.EWSList
+@{
+    string showType = "col-sm-6 col-lg-3 col-md-4";
+    string showMeanCol = "col-12";
+    string showMean = "none";
+
+    if (ViewBag.showType == "table")
+    {
+        showType = "col-sm-12";
+        showMeanCol = "col-6";
+        showMean = "block;";
+    }
+
+    <div class="row">
+        @if (ViewBag.type == "all")
+        {
+            foreach (var item in Model.EWSListWord)
+            {
+                <div class="@showType" style="padding:1px;">
+                    <div class="row multipleDiv" style="margin:2px;padding:1px;">
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="@showMeanCol" onclick="getWordDetails('@item.WordUN')">
+                                    <strong class="hand">@item.EWSWord.WordBody</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 text-right">
+                            @{
+                                string bilEKle = "";
+                                string bilCikar = "";
+                                string ogrEkle = "";
+                                string ogrCikar = "";
+
+                                if (item.EWSWord.Known)
+                                {
+                                    bilEKle = "none";
+                                    ogrEkle = "none";
+                                    ogrCikar = "none";
+                                }
+                                else
+                                {
+                                    bilCikar = "none";
+                                }
+
+                                if (item.EWSWord.WillLearn)
+                                {
+                                    ogrEkle = "none";
+                                    bilEKle = "none";
+                                    bilCikar = "none";
+                                }
+                                else
+                                {
+                                    ogrCikar = "none";
+                                }
+                            }
+
+                            <a href="javascript:void(0)" id="btnMultipleBildiklerimeEkle_@item.WordUN" class="btn btn-circle btn-success" data-toggle="tooltip" data-placement="bottom" title="Bildiklerime Ekle" onclick="SetIKnow('@item.WordUN')" style="display:@bilEKle;"><i class="fa fa-check"></i></a>
+                            <a href="javascript:void(0)" id="btnMultipleBildiklerimdenCikar_@item.WordUN" class="btn btn-circle btn-warning" data-toggle="tooltip" data-placement="bottom" title="Bildiklerimden Çıkar" onclick="RemoveIKnow('@item.WordUN')" style="display:@bilCikar;"><i class="fa fa-times"></i></a>
+                            <a href="javascript:void(0)" id="btnOgrenecelerimeEkle_@item.WordUN" class="btn btn-circle btn-success" data-toggle="tooltip" data-placement="bottom" title="Öğreneceklerime Ekle" onclick="SetIWillLearn('@item.WordUN')" style="display:@ogrEkle;"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0)" id="btnOgreneceklerimdenCikar_@item.WordUN" class="btn btn-circle btn-danger" data-toggle="tooltip" data-placement="bottom" title="Öğreneceklerimden Çıkar" onclick="RemoveILearn('@item.WordUN')" style="display:@ogrCikar;"><i class="fa fa-minus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                                    }
+
+                                }
+
+        @if (ViewBag.type == "known")
+        {
+            foreach (var item in Model.EWSListKnown)
+            {
+                <div class="@showType" style="padding:1px;">
+                    <div class="row multipleDiv" style="margin:2px;padding:1px;">
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="@showMeanCol hand" onclick="getWordDetails('@item.WordUN')">
+                                    <strong>@item.EWSWord.WordBody</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 text-right">
+                            @{
+                                string bilEKle = "";
+                                string bilCikar = "";
+                                string ogrEkle = "";
+                                string ogrCikar = "";
+
+                                if (item.EWSWord.Known)
+                                {
+                                    bilEKle = "none";
+                                    ogrEkle = "none";
+                                    ogrCikar = "none";
+                                }
+                                else
+                                {
+                                    bilCikar = "none";
+                                }
+
+                                if (item.EWSWord.WillLearn)
+                                {
+                                    ogrEkle = "none";
+                                    bilEKle = "none";
+                                    bilCikar = "none";
+                                }
+                                else
+                                {
+                                    ogrCikar = "none";
+                                }
+                            }
+
+                            <a href="javascript:void(0)" id="btnMultipleBildiklerimeEkle_@item.WordUN" class="btn btn-circle btn-success" data-toggle="tooltip" data-placement="bottom" title="Bildiklerime Ekle" onclick="SetIKnow('@item.WordUN')" style="display:@bilEKle;"><i class="fa fa-check"></i></a>
+                            <a href="javascript:void(0)" id="btnMultipleBildiklerimdenCikar_@item.WordUN" class="btn btn-circle btn-warning" data-toggle="tooltip" data-placement="bottom" title="Bildiklerimden Çıkar" onclick="RemoveIKnow('@item.WordUN')" style="display:@bilCikar;"><i class="fa fa-times"></i></a>
+                            <a href="javascript:void(0)" id="btnOgrenecelerimeEkle_@item.WordUN" class="btn btn-circle btn-success" data-toggle="tooltip" data-placement="bottom" title="Öğreneceklerime Ekle" onclick="SetIWillLearn('@item.WordUN')" style="display:@ogrEkle;"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0)" id="btnOgreneceklerimdenCikar_@item.WordUN" class="btn btn-circle btn-danger" data-toggle="tooltip" data-placement="bottom" title="Öğreneceklerimden Çıkar" onclick="RemoveILearn('@item.WordUN')" style="display:@ogrCikar;"><i class="fa fa-minus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                                    }
+
+                                }
+
+        @if (ViewBag.type == "willlearn")
+        {
+            foreach (var item in Model.EWSListWillLearn)
+            {
+                <div class="@showType" style="padding:1px;">
+                    <div class="row multipleDiv" style="margin:2px;padding:1px;">
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="@showMeanCol hand" onclick="getWordDetails('@item.WordUN')">
+                                    <strong>@item.EWSWord.WordBody</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 text-right">
+                            @{
+                                string bilEKle = "";
+                                string bilCikar = "";
+                                string ogrEkle = "";
+                                string ogrCikar = "";
+
+                                if (item.EWSWord.Known)
+                                {
+                                    bilEKle = "none";
+                                    ogrEkle = "none";
+                                    ogrCikar = "none";
+                                }
+                                else
+                                {
+                                    bilCikar = "none";
+                                }
+
+                                if (item.EWSWord.WillLearn)
+                                {
+                                    ogrEkle = "none";
+                                    bilEKle = "none";
+                                    bilCikar = "none";
+                                }
+                                else
+                                {
+                                    ogrCikar = "none";
+                                }
+                            }
+
+                            <a href="javascript:void(0)" id="btnMultipleBildiklerimeEkle_@item.WordUN" class="btn btn-circle btn-success" data-toggle="tooltip" data-placement="bottom" title="Bildiklerime Ekle" onclick="SetIKnow('@item.WordUN')" style="display:@bilEKle;"><i class="fa fa-check"></i></a>
+                            <a href="javascript:void(0)" id="btnMultipleBildiklerimdenCikar_@item.WordUN" class="btn btn-circle btn-warning" data-toggle="tooltip" data-placement="bottom" title="Bildiklerimden Çıkar" onclick="RemoveIKnow('@item.WordUN')" style="display:@bilCikar;"><i class="fa fa-times"></i></a>
+                            <a href="javascript:void(0)" id="btnOgrenecelerimeEkle_@item.WordUN" class="btn btn-circle btn-success" data-toggle="tooltip" data-placement="bottom" title="Öğreneceklerime Ekle" onclick="SetIWillLearn('@item.WordUN')" style="display:@ogrEkle;"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0)" id="btnOgreneceklerimdenCikar_@item.WordUN" class="btn btn-circle btn-danger" data-toggle="tooltip" data-placement="bottom" title="Öğreneceklerimden Çıkar" onclick="RemoveILearn('@item.WordUN')" style="display:@ogrCikar;"><i class="fa fa-minus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                                    }
+
+                                }
+    </div>
+}
+
+<script>
+   
+
+    function showMean(ID) {
+        console.log(ID);
+        var desc = "#mean_" + ID;
+        var span = "#spanMean_" + ID;
+
+        $(".mean").slideUp();
+
+        $(desc).html($(span).html());
+
+        $(desc).slideToggle();
+    }
+
+    function SetIKnow(wordID) {
+        var btnEkle = "#btnMultipleBildiklerimeEkle_" + wordID;
+        var btnCikar = "#btnMultipleBildiklerimdenCikar_" + wordID;
+
+        var btnOgreneceklerimeEkle = "#btnOgrenecelerimeEkle_" + wordID;
+
+        $(btnEkle).hide();
+        $(btnCikar).show();
+        $(btnOgreneceklerimeEkle).hide();
+        EWS_SetIKnow(wordID);
+    }
+
+    function RemoveIKnow(wordID) {
+
+        var btnEkle = "#btnMultipleBildiklerimeEkle_" + wordID;
+        var btnCikar = "#btnMultipleBildiklerimdenCikar_" + wordID;
+
+        var btnOgreneceklerimeEkle = "#btnOgrenecelerimeEkle_" + wordID;
+
+        $(btnOgreneceklerimeEkle).show();
+
+        $(btnEkle).show();
+        $(btnCikar).hide();
+        EWS_RemoveIKnow(wordID);
+    }
+
+    function SetIWillLearn(wordID) {
+        var btnEkle = "#btnOgrenecelerimeEkle_" + wordID;
+        var btnCikar = "#btnOgreneceklerimdenCikar_" + wordID;
+
+        var btnOgreneceklerimeEkle = "#btnMultipleBildiklerimeEkle_" + wordID;
+
+        $(btnEkle).hide();
+        $(btnCikar).show();
+        $(btnOgreneceklerimeEkle).hide();
+        EWS_IWillLearn(wordID);
+    }
+
+    function RemoveILearn(wordID) {
+        var btnEkle = "#btnOgrenecelerimeEkle_" + wordID;
+        var btnCikar = "#btnOgreneceklerimdenCikar_" + wordID;
+
+        var btnOgreneceklerimeEkle = "#btnMultipleBildiklerimeEkle_" + wordID;
+
+        $(btnOgreneceklerimeEkle).show();
+
+        $(btnEkle).show();
+        $(btnCikar).hide();
+        EWS_RemoveIWillLearn(wordID);
+    }
+
+</script>

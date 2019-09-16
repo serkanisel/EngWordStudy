@@ -1,0 +1,24 @@
+﻿@model List<EWS.Model.EWSWord>
+
+<div class="row">
+    <div class="col-12">
+        <div class="pull-right">
+            <a href="javascript:void(0)" class="btn btn-secondary" onclick="list()"><i class="fa fa-list"></i></a>
+            <a href="javascript:void(0)" class="btn btn-secondary" onclick="table()"><i class="fa fa-table"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-3 col-sm-12 ewslist" id="divListWord_@item.UN">
+            <div class="m-1 rounded bg-light">
+                <h5 class="font-italic"><a href="javascript:void(0)" onclick="getWordDetails('@item.UN')">@item.WordBody</a></h5>
+                <p class="mb-2">@item.Description</p>
+                <a href="javascript:void(0)" class="btn btn-warning" onclick="ListedenCikar('@item.UN')"><i class="fa fa-minus"></i> Listeden Çıkar</a>
+            </div>
+        </div>
+    }
+</div>

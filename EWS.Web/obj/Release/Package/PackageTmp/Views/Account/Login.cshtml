@@ -1,0 +1,120 @@
+﻿@model EWS.Model.EWSUser
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+<link rel="shortcut icon" href="~/images/ews.ico">
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@{
+    Layout = null;
+}
+<div id="loadingDiv" style="width:100%;height:100%;background-color:rgba(0,0,0,0.4);top:0px;left:0px;position:fixed;z-index:2000;">
+    <div class="loader text" style="top:30% !important;">
+
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <span style="color:#ff6a00;font-style:italic;font-weight:bold;font-size:3em;">EWS</span>
+            <br />
+            <span  style="color:#444;font-size:2.4em;font-weight:bold;"> English Word Study</span>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-signin" role="tab" aria-controls="pills-home" aria-expanded="true">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-signup" role="tab" aria-controls="pills-profile" aria-expanded="true">Sign Up</a>
+                </li>
+
+            </ul>
+            <div class="tab-content" id="pills-content">
+                <div class="tab-pane fade show active" id="pills-signin" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="form-group">
+                        <label for="username" class="sr-only">Kullanıcı Adı</label>
+                        <input type="text" name="username" id="username" class="form-control" placeholder="kullanıcı adı">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="sr-only">Şifre</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="şifre">
+                    </div>
+                    <div class="form-group">
+                        <a href="javascript:void(0)" class="btn btn-outline-warning" onclick="login()" id="loginBtn">Login <span class="btn-label btn-label-right"><i class="fa fa-sign-in"></i></span></a>
+                    </div>
+                    <div class="form-group">
+                        <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-signup" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <form role="form" action="javascript:;" method="post" id="register-form" autocomplete="off">
+                        <div class="form-group">
+                            <label for="key" class="sr-only">Login Name</label>
+                            <input type="text" name="loginnameforregister" id="loginnameforregister" class="form-control" placeholder="Login Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="key" class="sr-only">Password</label>
+                            <input type="password" name="key" id="passwordregister" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="key" class="sr-only">Password Again</label>
+                            <input type="password" name="passwordagain" id="passwordagain" class="form-control" placeholder="Password Again">
+                        </div>
+                        <div class="form-group">
+                            <label for="key" class="sr-only">Name Surname</label>
+                            <input type="text" name="namesurname" id="namesurname" class="form-control" placeholder="Name Surname">
+                        </div>
+
+                        <a href="javascript:void(0)" id="btn-register" class="btn btn-outline-warning" onclick="register()"><i class="fa fa-save"></i> Register</a>
+                    </form>
+                </div>
+
+            </div>
+
+            <div id="message" class="message collapse">
+                <div id="msg">
+
+                </div>
+            </div>
+            <div id="resultLogin">
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-dark fixed-bottom" style="min-height:80px;color:#fff;" id="footer">
+    <div id="footerWordDescription" class="container p-0 divfooter" style="overflow:auto;overflow-x:hidden;max-height:350px;">
+        <div class="col-12 text-center">@DateTime.Now.Year<span>-</span> Copyright Serkan İşel</div>
+    </div>
+</footer>
+
+<script>
+
+    $(function () {
+        $("#pills-signin").keydown(function (e) {
+            switch (e.which) {
+                case 13: // enter key
+                    $("#loginBtn").trigger("click")
+                    break;
+            }
+        });
+
+        $("#pills-signup").keydown(function (e) {
+            switch (e.which) {
+                case 13: // enter key
+                    $("#btn-register").trigger("click")
+                    break;
+            }
+        });
+    });
+
+    var $loading = $('#loadingDiv').hide();
+    $(document)
+        .ajaxStart(function () {
+            $('#loadingDiv').show();
+        })
+        .ajaxStop(function () {
+            $('#loadingDiv').hide();
+        });
+</script>

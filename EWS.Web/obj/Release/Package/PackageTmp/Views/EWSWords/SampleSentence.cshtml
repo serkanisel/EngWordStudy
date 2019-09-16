@@ -1,0 +1,33 @@
+﻿@model EWS.Model.EWSSampleSentence
+
+<div class="container bg-light">
+    <div class="row">
+        <div class="col-12 p-1">
+            <input type="text" id="txtSentenceBody" class="form-control" placeholder="örnek cümle"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 p-1">
+            <input type="text" id="txtSentenceMean" class="form-control" placeholder="örnek cümle anlamı"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 p-1 text-right">
+            <a href="javascript:void(0)" class="btn btn-warning" id="btnSampleSentenceKaydet"><i class="fa fa-save"></i> Kaydet</a>
+            <a href="javascript:void(0)" class="btn btn-dark" onclick="$('#divNewSentence').slideToggle()"><i class="fa fa-save"></i> Kapat</a>
+        </div>
+    </div>
+</div>
+
+<div id="resultSampleSentence">
+
+</div>
+<script>
+    $("#btnSampleSentenceKaydet").click(function () {
+        var body = $("#txtSentenceBody").val();
+        var mean = $("#txtSentenceMean").val();
+        var wordUN = $("#selectedWordUN").val();
+
+        SaveOrnekCumle(wordUN, body, mean,"resultSampleSentence");
+    });
+</script>

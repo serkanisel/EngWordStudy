@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d520a8bdf948433c9b813ac6c1efabd4" Name="Diagram1">
+        <EntityTypeShape EntityType="EWS.Model.EWSKnownWords" Width="1.5" PointX="8.25" PointY="9.375" />
+        <EntityTypeShape EntityType="EWS.Model.EWSLearnList" Width="1.5" PointX="5.25" PointY="11.625" />
+        <EntityTypeShape EntityType="EWS.Model.EWSList" Width="1.5" PointX="3" PointY="11.75" />
+        <EntityTypeShape EntityType="EWS.Model.EWSListWord" Width="1.5" PointX="8.25" PointY="16.875" />
+        <EntityTypeShape EntityType="EWS.Model.EWSReadPart" Width="1.5" PointX="5.25" PointY="8.5" />
+        <EntityTypeShape EntityType="EWS.Model.EWSSampleSentence" Width="1.5" PointX="8.25" PointY="13" />
+        <EntityTypeShape EntityType="EWS.Model.EWSUser" Width="1.5" PointX="0.75" PointY="10.625" />
+        <EntityTypeShape EntityType="EWS.Model.EWSWord" Width="1.5" PointX="3" PointY="15.375" />
+        <AssociationConnector Association="EWS.Model.FK_EWSListKnown_EWSUser" />
+        <AssociationConnector Association="EWS.Model.FK_EWSListKnown_EWSWord" />
+        <AssociationConnector Association="EWS.Model.FK_EWSLearnList_EWSList" />
+        <AssociationConnector Association="EWS.Model.FK_EWSLearnList_EWSUser" />
+        <AssociationConnector Association="EWS.Model.FK_EWSList_EWSUser" />
+        <AssociationConnector Association="EWS.Model.FK_EWSListWord_EWSList" />
+        <AssociationConnector Association="EWS.Model.FK_EWSReadPart_EWSReadPart" />
+        <AssociationConnector Association="EWS.Model.FK_EWSSampleSentence_EWSList" />
+        <AssociationConnector Association="EWS.Model.FK_EWSListWord_EWSWord" />
+        <AssociationConnector Association="EWS.Model.FK_EWSReadPart_EWSUser" />
+        <AssociationConnector Association="EWS.Model.FK_EWSSampleSentence_EWSUser" />
+        <AssociationConnector Association="EWS.Model.FK_EWSSampleSentence_EWSWord" />
+        <AssociationConnector Association="EWS.Model.FK_Word_User" />
+        <EntityTypeShape EntityType="EWS.Model.EWSWillLearn" Width="1.5" PointX="5.25" PointY="15.875" />
+        <AssociationConnector Association="EWS.Model.FK_EWSListWillLearn_EWSWord" />
+        <EntityTypeShape EntityType="EWS.Model.EWSReadingPartCategory" Width="1.5" PointX="0.75" PointY="0.875" />
+        <AssociationConnector Association="EWS.Model.FK_EWSReadPart_EWSReadingPartCategory" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

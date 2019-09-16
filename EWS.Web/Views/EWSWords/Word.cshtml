@@ -1,0 +1,81 @@
+﻿@model EWS.Model.EWSWord
+
+@using EWS.Web.Helpers
+
+<div id="word_@Model.UN" class="word_@Model.UN">
+    <div class="container p-0">
+        <div class="row">
+            <div class="p-3 m-0 rounded">
+                <h5 class="font-italic"><a href="javascript:void(0)" onclick="getWordDetails('@Model.UN')" id="wrdBody">@Model.WordBody</a></h5>
+                @if (Model.UserID == ((EWS.Model.EWSUser)Session["CurrentUser"]).ID)
+                {
+                     <p class="mb-2">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" value="@Model.Description" id="wrdDescription_@Model.UN" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-warning" type="button" onclick="UpdateWord('@Model.UN',$('#wrdBody').html(),$('#wrdDescription_@Model.UN').val(),'wordResult')"><i class="fa fa-save"></i></button>
+                            </div>
+                        </div>
+                     </p>
+                }
+                else
+                {
+                    <p class="mb-2" id="wrdDescription">@Model.Description</p>
+                }
+
+                @if (Model.UN != new Guid())
+                {
+                    if (Model.Known)
+                    {
+                        <a href="javascript:void(0)" class="wordClass btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Bildiğim Kelimelerden Çıkar" id="btnWordKnowRemove" onclick="EWS_RemoveIKnow('@Model.UN')"><i class="fa fa-minus"></i></a>
+                    }
+                    else if (Model.Known == false && Model.WillLearn == false)
+                    {
+                        <a href="javascript:void(0)" class="wordClass btn btn-dark" id="btnWordKnowAdd" data-toggle="tooltip" data-placement="top" title="Bildiğim Kelimelere Ekle" onclick="EWS_SetIKnow('@Model.UN')"><i class="fa fa-check"></i></a>
+                    }
+
+                    if (Model.WillLearn)
+                    {
+                        <a href="javascript:void(0)" class="wordClass btn btn-primary" data-toggle="tooltip" data-placement="top" title="Öğrenme Listemden Çıkar" id="btnWordKnowRemove" onclick="EWS_RemoveIWillLearn('@Model.UN')"><i class="fa fa-minus"></i></a>
+                    }
+                    else if (Model.WillLearn == false && Model.Known == false)
+                    {
+                        <a href="javascript:void(0)" class="wordClass btn btn-primary" id="btnWordWillLearnAdd" data-toggle="tooltip" data-placement="top" title="Öğrenme Listeme Ekle" onclick="EWS_SetIWillLearn('@Model.UN')"><i class="fa fa-graduation-cap"></i></a>
+                    }
+
+
+                    <a href="javascript:void(0)" class="wordClass btn btn-success" id="btnListeyeEkle" data-toggle="tooltip" data-placement="top" title="Listeye Ekle" onclick="ListeyeEkle('@Model.UN')"><i class="fa fa-list"></i></a>
+                }
+                else
+                {
+                    <a href="javascript:void(0)" class="wordClass btn btn-info" id="btnSaveAsWord"><i class="fa fa-plus"></i> Kelime Olarak Ekle</a>
+                    <a href="javascript:void(0)" class="wordClass btn btn-dark" id="btnSaveSentence"><i class="fa fa-plus-circle"></i> Cümlelere Ekle</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="wordResult">
+
+</div>
+
+<script>
+
+
+    $("#btnSaveAsWord").click(function () {
+        var desc = $("#wrdDescription").html();
+        var wrd = $("#wrdBody").html();
+
+        WordDetailNewWord(wrd, desc, "wordResult");
+
+    });
+
+    $("#btnSaveSentence").click(function () {
+        var desc = $("#wrdDescription").html();
+        var wrd = $("#wrdBody").html();
+
+        NewSentenceAsListMember(wrd, desc, "wordResult");
+
+    });
+</script>

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Hata Oluştu";
+}
+<div class="alert " role="alert">
+    <div class="brand-text brand-big row">
+        <div class="col-sm-3">
+            <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                <span style="color:#ff6a00;font-style:italic;font-weight:bold;font-size:1.6em;">EWS</span>
+            </a>
+        </div>
+        <div class="col-sm-9">
+            Sistemde beklenilmeyen bir hata oluştu. Lütfen Sistem Yöneticisine Haber Verin.<br />
+            <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Hatanın Teknik Detayı
+            </a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="collapse" id="collapseExample">
+        <div class="alert alert-danger">
+            @Session["Error"]
+        </div>
+    </div>
+</div>
+

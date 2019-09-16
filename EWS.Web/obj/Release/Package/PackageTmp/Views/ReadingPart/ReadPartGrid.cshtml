@@ -1,0 +1,39 @@
+﻿@model List<EWS.Model.EWSReadPart>
+
+
+@foreach (var item in Model)
+{
+    <div class="col-md-3 col-md-4 col-sm-12 p-0" id="EWSList_@item.UN">
+        <div class="row m-1 p-2 indexBody bg-light">
+            <div class="col-12 text-center">
+                <h3 class="font-italic">@item.Name</h3>
+            </div>
+            <div class="col-4">
+                <span class="font-weight-bold">Toplam <span class="font-italic badge badge-dark">@item.EWSList.EWSListWord.Count()</span></span>
+            </div>
+            <div class="col-4">
+                @if (item.EWSList.ListKnow != null)
+                {
+                    <span class="font-weight-bold">Bilinen <span class="font-italic badge badge-dark">@item.EWSList.ListKnow.Count()</span></span>
+                }
+            </div>
+
+            <div class="overlay">
+                <div class="text">
+                    @if (item.UserID == 1 && item.EWSList.EWSListWord.Count() > 0)
+                    {
+                        <a href="@Url.Action("Preview","EWSLists", new { listID=@item.EWSList.UN })" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Analiz Et"><i class="fa fa-crosshairs" aria-hidden="true"></i></a>
+                    }
+
+                    @if (item.UserID != 1)
+                    {
+                        <a href="@Url.Action("Preview","EWSLists", new { listID=@item.EWSList.UN })" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Analiz Et"><i class="fa fa-crosshairs" aria-hidden="true"></i></a>
+                        <a href="@Url.Action("SelectReadingPart","ReadingPart", new { UN=@item.UN })" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Parçayı Oku"><i class="fa fa-crosshairs" aria-hidden="true"></i></a>
+                        <a href="@Url.Action("ReadingPartSentences", "ReadingPart", new { listUN = @item.ListUN , name=@item.Name })" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Parçanın Cümleleri"><i class="fa fa-crosshairs" aria-hidden="true"></i></a>
+                        <a href="javascript:void(0)" onclick="deleteReadingPart('@item.EWSList.UN')" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Okuma Parçasını Sil"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}

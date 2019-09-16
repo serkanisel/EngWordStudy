@@ -1,0 +1,381 @@
+﻿@model EWS.Model.EWSList
+<script>
+
+        var type="@ViewBag.type";
+        var sayi = 0;
+        var listID='@Model.UN';
+        function setType(type) {
+            $("#txtrownumber").val(1);
+            $("#type").val(type);
+        }
+
+        function getType(type) {
+            return $("#type").val();
+        }
+
+
+        function GetListIKnow(getListType) {
+            var tab = $("#activeTab").val();
+            setType(getListType);
+
+            if (getListType == "known") {
+                sayi = parseInt($("#btnKnownSayi").html());
+                rownumber = 1;
+                $("#buttons div").removeClass("divButtonActive");
+
+                $("#btnKnown").addClass("divButtonActive");
+            }
+            else if (getListType == "all") {
+                sayi = parseInt($("#btnTotalWordsSayi").html());
+                rownumber = 1;
+                $("#buttons div").removeClass("divButtonActive");
+
+                $("#btnAll").addClass("divButtonActive");
+            }
+            else if (getListType == "willlearn") {
+                sayi = parseInt($("#btnWillLearnSayi").html());
+                rownumber = 1;
+                $("#buttons div").removeClass("divButtonActive");
+
+                $("#btnWillLearn").addClass("divButtonActive");
+            }
+
+            if (tab == "oneByOne")
+            {
+                    var rownumber = 1;
+                    $("#rownumber").val(1);
+                    $("#listCount").val(sayi);
+                    $("#numberoflist").val(sayi);
+                    getWord(listID, rownumber);
+            }
+
+            if (tab == "multiple")
+            {
+                GetMultiple('multiple');
+            }
+
+            if (tab == "table") {
+                GetMultiple('table');
+            }
+    }
+
+    function GetOneByOne() {
+        $("#activeTab").val("oneByOne");
+        $.ajax({
+            url: '@Url.Action("Preview", "EWSLists")',
+            type: 'POST',
+            data: { listID: '@Model.UN', type: "all" },
+            async: true,
+            success: function (data) {
+                $("#divOneByOne").html(data);
+                GetListIKnow("all");
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+            }
+        });
+    }
+    function GetMultiple(tabType) {
+
+        $.ajax({
+            url: '@Url.Action("GetMultiple", "EWSLists")',
+            type: 'POST',
+            data: { listID: '@Model.UN', type: getType(), showType: tabType },
+            async: true,
+            success: function (data) {
+                if (tabType=="multiple")
+                    $("#divMultiple").html(data);
+                else if (tabType=="table")
+                    $("#divTable").html(data);
+
+                $("#activeTab").val(tabType);
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+            }
+            });
+    }
+
+    function getWord(listID, rownum) {
+        type = $("#type").val();
+        $.ajax({
+            url: '@Url.Action("GetWordByListID", "EWSWords")',
+            type: 'POST',
+            data: { listID: listID, rownumber: rownum, type: type },
+            async: true,
+            success: function (text, data) {
+                $("#word").html(text["WordBody"]);
+                $("#wordID").val(text["UN"]);
+                $("#description").html(text["Description"]);
+                $("#wordSample").html(text["Sentence"]);
+
+                GetSampleSentences(text["UN"], "wordSample");
+
+                if (text["Known"] == true) {
+                    $("#iknowsuccess").show();
+                }
+                else {
+                    $("#iknowsuccess").hide();
+                }
+
+                if (text["WillLearn"] == true) {
+                    $("#iwilllearnsuccess").show();
+                }
+                else {
+                    $("#iwilllearnsuccess").hide();
+                }
+
+                if (text["WillLearn"] == true || text["Known"] == true) {
+                    $("#btnIknow").addClass("disabled");
+                    $("#btnILearn").addClass("disabled");
+                }
+                else {
+                    $("#btnIknow").removeClass("disabled");
+                    $("#btnILearn").removeClass("disabled");
+                }
+
+                $("#numberoflist").html($("#listCount").val());
+                $("#rownumber").val(rownum);
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+            }
+        });
+    }
+
+    function GetSampleSentences(wordID,divName)
+    {
+         $.ajax({
+            url: '@Url.Action("GetWordSamples", "EWSWords")',
+            type: 'POST',
+            data: { wordID: wordID },
+            async: false,
+            success: function (text,data) {
+                $("#" + divName).html(text);
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+                Message(errorThrown, "error");
+            }
+            });
+    }
+    function keypressed(e) {
+        var rownumber = parseInt($("#txtrownumber").val());
+        var listCount=$("#listCount").val();
+        if( rownumber=="")
+            return;
+
+        if (e.keyCode == 13 && rownumber>0 && rownumber <=listCount) {
+            getWord(listID, rownumber);
+
+            return false;
+        }
+
+        return true;
+    }
+    function RemoveFromIKnow() {
+        //burada wordID ve listeID'si göndereceğiz
+        wordID = $("#wordID").val();
+        EWS_RemoveIKnow(wordID);
+    }
+    function IKnow() {
+        //burada wordID ve listeID'si göndereceğiz
+        wordID = $("#wordID").val();
+        EWS_SetIKnow(wordID);
+
+    }
+    function IWillLearn() {
+        //burada wordID ve listeID'si göndereceğiz
+        wordID = $("#wordID").val();
+        EWS_IWillLearn(wordID);
+
+    }
+    function RemoveIWillLearn() {
+        //burada wordID ve listeID'si göndereceğiz
+        wordID = $("#wordID").val();
+        EWS_RemoveIWillLearn(wordID);
+
+    }
+
+
+    function EWS_RemoveIKnow(wordID) {
+
+        $.ajax({
+            url: '@Url.Action("RemoveIKnow", "EWSLists")',
+            type: 'POST',
+            data: { listID: listID, wordID: wordID },
+            async: false,
+            success: function (text, data) {
+                var sayi = parseInt($("#btnKnownSayi").html());
+                sayi = sayi - 1;
+                $("#btnKnownSayi").html(sayi);
+                $("#iknowsuccess").hide();
+                $("#btnIknow").removeClass("disabled");
+                $("#btnILearn").removeClass("disabled");
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+            }
+        });
+    }
+
+    function EWS_SetIKnow(wordID) {
+        $.ajax({
+            url: '@Url.Action("SetIKnow", "EWSLists")',
+            type: 'POST',
+            data: { listID: listID, wordID: wordID },
+            async: false,
+            success: function (text, data) {
+                var sayi = parseInt($("#btnKnownSayi").html());
+                sayi = sayi + 1;
+                $("#btnKnownSayi").html(sayi);
+                $("#iknowsuccess").show();
+                $("#btnIknow").addClass("disabled");
+                $("#btnILearn").addClass("disabled");
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+            }
+        });
+    }
+
+    function EWS_IWillLearn(wordID) {
+         $.ajax({
+            url: '@Url.Action("SetILearn", "EWSLists")',
+            type: 'POST',
+            data: { listID: listID, wordID: wordID },
+            async: false,
+            success: function (text, data) {
+                var sayi = parseInt($("#btnWillLearnSayi").html());
+                sayi = sayi + 1;
+                $("#btnWillLearnSayi").html(sayi);
+                $("#iwilllearnsuccess").show();
+                $("#btnIknow").addClass("disabled");
+                $("#btnILearn").addClass("disabled");
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+            }
+        });
+    }
+
+    function EWS_RemoveIWillLearn(wordID) {
+         $.ajax({
+            url: '@Url.Action("RemoveIWillLearn", "EWSLists")',
+            type: 'POST',
+            data: { listID: listID, wordID: wordID },
+            async: false,
+            success: function (text, data) {
+                var sayi = parseInt($("#btnWillLearnSayi").html());
+                sayi = sayi - 1;
+                $("#btnWillLearnSayi").html(sayi);
+                $("#iwilllearnsuccess").hide();
+                $("#btnIknow").removeClass("disabled");
+                $("#btnILearn").removeClass("disabled");
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+            }
+        });
+    }
+</script>
+
+@*<ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","EWSLists")">Listeler</a></li>
+        <li class="breadcrumb-item active"><b>@Model.Name</b></li>
+    </ol>*@
+<div class="row">
+    <div class="col-10">
+        <h3><span style="color:#000;font-style:italic;">@Model.Name</span> Liste Analizi</h3>
+    </div>
+    <div class="col-2">
+        @if (Model.EWSReadPart.Count() > 0)
+                {
+                    List<EWS.Model.EWSReadPart> readParts = Model.EWSReadPart.ToList();
+                    <a href="@Url.Action("SelectReadingPart","ReadingPart", new { readParts[0].UN})" class="btn btn-info"><i class="fa fa-reply"></i></a>
+        }
+    </div>
+</div>
+
+<div class="row" style="margin-bottom:15px;">
+    <div class="nav  nav-pills" id="v-pills-tab" role="tablist">
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-onebyone" role="tab" aria-controls="v-pills-onebyone" aria-expanded="true" onclick="GetOneByOne()"><i class="fa fa-square" aria-hidden="true"></i> One By One</a>
+        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-multiple" role="tab" aria-controls="v-pills-multiple" aria-expanded="true" onclick="GetMultiple('multiple')"><i class="fa fa-table" aria-hidden="true"></i> Multiple</a>
+        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-table" role="tab" aria-controls="v-pills-table" aria-expanded="true" onclick="GetMultiple('table')"><i class="fa fa-table" aria-hidden="true"></i> Table</a>
+        @*<a class="nav-link disabled" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-flashcard" role="tab" aria-controls="v-pills-home" aria-expanded="true"><i class="fa fa-square" aria-hidden="true"></i> Flash Card</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-multiplechoice" role="tab" aria-controls="v-pills-profile" aria-expanded="true"><i class="fa fa-table" aria-hidden="true"></i> Multiple Coice</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-filltheblank" role="tab" aria-controls="v-pills-messages" aria-expanded="true"><i class="fa fa-table" aria-hidden="true"></i> Fill The Blank</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-write" role="tab" aria-controls="v-pills-write" aria-expanded="true"><i class="fa fa-table" aria-hidden="true"></i> Listen And Write</a>*@
+    </div>
+</div>
+<div class="row">
+    <div class="col-12" style="padding-left:0px;margin-bottom:10px;">
+        <div class="row" id="buttons">
+            <div class="col-3 divButton text-center" id="btnAll" onclick="GetListIKnow('all')" data-toggle="tooltip" data-placement="bottom" title="Tüm Kelimeler">
+                <h2 id="btnTotalWordsSayi">@Model.EWSListWord.Count</h2>
+                <h5>Tüm Liste</h5>
+            </div>
+            <div class="col-3 divButton text-center" id="btnKnown" onclick="GetListIKnow('known')" data-toggle="tooltip" data-placement="bottom" title="Bilinen Kelimeler">
+                <h2 id="btnKnownSayi">
+                    @*@if (Model.EWSListKnown != null)
+                    {
+                        @Model.EWSListKnown.Count
+                    }
+                    else
+                    {
+                        string sifir = "0";
+                        @sifir
+                    }*@
+                </h2>
+                <h5>
+                    Bilinen Kelimeler
+                </h5>
+            </div>
+            <div class="col-3 divButton text-center" id="btnWillLearn" onclick="GetListIKnow('willlearn')" data-toggle="tooltip" data-placement="bottom" title="Öğrenilecek Kelimeler">
+                <h2 id="btnWillLearnSayi">
+                    @if (Model.EWSListWillLearn != null)
+                    {
+                        @Model.EWSListWillLearn.Count
+                    }
+                    else
+                    {
+                        string sifir = "0";
+                        @sifir
+                    }
+                </h2>
+                <h5>
+                    Öğrenilecek Kelimeler
+                </h5>
+            </div>
+            <div class="col-3">
+                <input type="number" value="1" id="txtrownumber" class="btn btn-info" style="width:70px;" onkeypress="return keypressed(event)" /> /
+                <span id="numberoflist" class="btn btn-info"></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+<input type="hidden" id="type" value="@ViewBag.type" />
+<input type="hidden" id="listCount" value="@Model.EWSListWord.Count().ToString()" />
+<input type="hidden" id="key" value="@Model.UN" />
+<input type="hidden" id="wordID" />
+<input type="hidden" id="activeTab" value="oneByOne" />
+
+<div class="row">
+    <div class="tab-content col-12" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-onebyone" role="tabpanel" aria-labelledby="v-pills-onebyone-tab">
+            <div id="divOneByOne">
+                <script>GetOneByOne('all')</script>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="v-pills-multiple" role="tabpanel" aria-labelledby="v-pills-multiple-tab">
+            <div id="divMultiple">
+            </div>
+        </div>
+        <div class="tab-pane fade" id="v-pills-table" role="tabpanel" aria-labelledby="v-pills-table-tab">
+            <div id="divTable">
+
+            </div>
+        </div>
+        @*<div class="tab-pane fade" id="v-pills-flashcard" role="tabpanel" aria-labelledby="v-pills-flashcard-tab">Flash Card</div>
+            <div class="tab-pane fade" id="v-pills-multiplechoice" role="tabpanel" aria-labelledby="v-pills-multiplechoice-tab">Multiple Choice</div>
+            <div class="tab-pane fade" id="v-pills-filltheblank" role="tabpanel" aria-labelledby="v-pills-filltheblank-tab">Fill The Blank</div>
+            <div class="tab-pane fade" id="v-pills-write" role="tabpanel" aria-labelledby="v-pills-write-tab">Listen And Write</div>*@
+    </div>
+</div>
+
+

@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EWS</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderSection("scripts", required: false)
+    <link rel="shortcut icon" href="~/images/ews.ico">
+    <link href="~/Content/SideBar.css" rel="stylesheet" />
+
+    <link href="https://cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.4/quill.js"></script>
+
+</head>
+<body>
+    <div class="modal fade" id="modalEWS" tabindex="-1" role="dialog" aria-labelledby="modal2Label">
+        <div class="modal-dialog modal-lg" role="dialog" id="dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h4 class="modal-title" id="modal2Label"><span id="modalTitleEWS"></span></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" id="EWSModalBody">
+                    <div class="loader text" style="display:none;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*@Html.Partial("Sidebar")*@
+
+    @if (((EWS.Model.EWSUser)HttpContext.Current.Session["CurrentUser"]) != null)
+    {
+        <nav class="navbar navbar-expand-xl sticky-top bg-light p-1">
+            <div class="container-fluid">
+                <div id="logoMenu">
+                    <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                        <span class="text-warning" style="font-style:italic;font-weight:bold;font-size:1.6em;">EWS</span>
+                    </a>
+                    <span class="text-dark" style="font-size:1.4em;font-weight:bold;"> English Word Study</span>
+                </div>
+                <div>
+                    <div class="ml-auto mr-auto">
+                        <div class="loader text" id="loadingDiv" style="top:10% !important;display:none;">
+
+                        </div>
+                    </div>
+                    <div class="ml-auto">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="txtSearchGenel" onkeydown="return runScript(event)"  placeholder="ara" aria-label="ara" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" onclick="searchGenel('searchResult')"><i class="fa fa-search"></i>&nbsp;Ara</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <a href="@Url.Action("GetIKnownWords","EWSWords")" data-toggle="tooltip" data-placement="bottom" title="Bildiğim Kelimeler Listesi">
+                                        <i class="fa fa-check"></i>
+                                        <span class="badge badge-dark size14 text-light" id="iKnownCount">
+                                            @{ string knownCount = ((EWS.Model.EWSUser)HttpContext.Current.Session["CurrentUser"]).KnownWordsCount.ToString();}
+                                            @knownCount
+                                        </span>
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <a href="@Url.Action("GetWillLearnWords","EWSWords")" data-toggle="tooltip" data-placement="bottom" title="Öğreneceğim Kelimeler Listesi">
+                                        <i class="fa fa-graduation-cap"></i>
+                                        <span class="badge badge-primary size16 text-light" id="willLearnCount">
+                                            @{ string willLearnCount = ((EWS.Model.EWSUser)HttpContext.Current.Session["CurrentUser"]).WillLearnWordsCount.ToString();}
+                                            @willLearnCount
+                                        </span>
+
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            @{string name2 = ((EWS.Model.EWSUser)HttpContext.Current.Session["CurrentUser"]).Name + " " + ((EWS.Model.EWSUser)HttpContext.Current.Session["CurrentUser"]).Surname;
+                                            }
+                                            @name2 &nbsp;&nbsp;
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="@Url.Action("Index","EWSlists")"><i class="fa fa-bars"></i> Listeler</a>
+                                            <a class="dropdown-item" href="@Url.Action("Index","EWSWords")"><i class="fa fa-file-word-o"></i> Kelimeler</a>
+                                            <a class="dropdown-item" href="@Url.Action("Index","ReadingPart")"><i class="fa fa-book"></i> Okuma Parçaları</a>
+                                            <a class="dropdown-item" href="@Url.Action("Index","StudyScreen")"><i class="fa fa-desktop"></i> Çalışma Ekranı</a>
+                                            <a class="dropdown-item" href="@Url.Action("Index","Sentence")"><i class="fa fa-desktop"></i> Cümleler</a>
+
+                                            <a class="dropdown-item" href="#"><i class="fa fa-cogs"></i> Ayarlar</a>
+                                            <a class="dropdown-item" href="@Url.Action("Logout","Account")"><i class="fa fa-sign-out"></i> Çıkış</a>
+                                        </div>
+                                    </div>
+                                    @*<a class="btn btn-light mr-1" href="javascript:void(0)" onclick="openNav()" id="library">
+                                        <i class="fa fa-bars"></i>
+                                    </a>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    }
+
+    <div class="container" id="main">
+        <div id="searchResult" class="container m-0 p-0" style="display:none;z-index:5000;">
+
+        </div>
+        <div id="contentDiv" class="mt-2" style="margin-bottom:50px;">
+            @RenderBody()
+        </div>
+        <footer class="fixed-bottom" style="background-color: rgba(0,0,0, 0.85);min-height:40px;color:#ddd;" id="footer">
+            <div id="footerWordDescription" class="container p-0 divfooter" style="overflow:auto;overflow-x:hidden;max-height:350px;">
+                <div class="col-12 text-center">@DateTime.Now.Year <span> / </span> Copyright Serkan İşel</div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="message" class="message collapse">
+        <div id="msg">
+
+        </div>
+    </div>
+    <input type="hidden" id="sideBarSwitch"/>
+    <script type="text/javascript">
+        //function openNav() {
+        //    var sideBarSwitch = $("#sideBarSwitch").val();
+
+        //    if (sideBarSwitch == 0) {
+        //        document.getElementById("mySidenav").style.left = "20px";
+        //        SetSidebarStatus(1);
+        //    }
+        //    else {
+        //        document.getElementById("mySidenav").style.left = "-500px";
+        //        SetSidebarStatus(0);
+        //    }
+        //}
+
+
+        //function closeNav() {
+        //    document.getElementById("mySidenav").style.left = "-500px";
+        //}
+
+        //$(function () {
+        //    $('[data-toggle="tooltip"]').tooltip();
+        //})
+
+        $(document).ready(function () {
+
+            //if (getSidebarStatus() == "0") {
+            //    document.getElementById("mySidenav").style.left = "-500px";
+            //}
+            //else {
+            //    document.getElementById("mySidenav").style.left = "20px";
+            //}
+
+            setInterval(function () {
+                $.ajax({
+                    url: '@Url.Action("CheckSession", "Account")' ,
+                type: 'POST',
+                async: false,
+                contentType: 'application/json; charset=utf-8',
+                success: function (text) {
+                    if(text=="")
+                        window.location.href = "@Url.Action("Logout", "Account")";
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+
+                }
+            });
+            }, 600000);
+        });
+
+        $(document)
+            .ajaxStart(function () {
+                ajaxStart();
+            })
+            .ajaxStop(function () {
+                ajaxEnd();
+            });
+    </script>
+</body>
+</html>

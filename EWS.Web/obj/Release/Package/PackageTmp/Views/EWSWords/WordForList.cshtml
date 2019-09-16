@@ -1,0 +1,17 @@
+﻿@model EWS.Model.EWSWord
+
+<div id="wordForList_@Model.UN">
+    <div class="p-3 m-0 rounded">
+        <h5 class="font-italic"><a href="javascript:void(0)" onclick="getWordDetails('@Model.UN')">@Model.WordBody</a></h5>
+        <p class="mb-2">@Model.Description</p>
+        @if (Model.UN != new Guid())
+        {
+            <a href="javascript:void(0)" data-content="@Model.UN" class="wordClass btn btn-dark" @*data-toggle="tooltip" data-placement="right" title="Bildiğim Kelimelerden Çıkar"*@ id="btnAddToList"><i class="fa fa-plus"></i> Listeye Ekle</a>
+        }
+    </div>
+</div>
+
+<script>
+
+</script>
+

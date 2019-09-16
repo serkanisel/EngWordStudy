@@ -1,0 +1,21 @@
+﻿@model List<EWS.Model.EWSSampleSentence>
+@{
+    int i = 0;
+
+    foreach (var item in Model)
+    {
+        i++;
+        <div class="row col-12 mt-1 mb-1">
+            <div class="col-lg-4 col-md-12 col-sm-11">
+                <strong>@i.ToString()- </strong> <span >@item.Sentence</span>
+            </div>
+            <div class="col-lg-7 col-md-12 col-sm-11">
+                <span  style="font-family:Tahoma;font-style:italic;">@item.SentenceMean</span>
+            </div>
+            <div class="col-1 text-right">
+                <a href="javascript:void(0)" class="btn btn-danger" onclick="DeleteComment('@item.UN')"><i class="fa fa-trash-o"></i></a>
+            </div>
+        </div>
+    }
+}
+
