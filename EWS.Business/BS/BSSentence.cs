@@ -51,7 +51,7 @@ namespace EWS.Business.BS
         {
             IRepositoryBase<EWSSampleSentence> _repSentence = new RepositoryBase<EWSSampleSentence>();
 
-            List<EWSSampleSentence> listSentence = _repSentence.GetList(p => p.Sentence.Contains(searchWord) ||p.SentenceMean.Contains(searchWord));
+            List<EWSSampleSentence> listSentence = _repSentence.GetList(p => p.Sentence.Contains(searchWord) || p.SentenceMean.Contains(searchWord));
 
             return listSentence;
         }
@@ -62,7 +62,7 @@ namespace EWS.Business.BS
 
             EWSSampleSentence sentence = _repSentence.Get(p => p.UN == _sentence.UN);
 
-            if(sentence!=null)
+            if (sentence != null)
             {
                 sentence.Sentence = _sentence.Sentence;
                 sentence.SentenceMean = _sentence.SentenceMean;
@@ -76,7 +76,7 @@ namespace EWS.Business.BS
         {
             IRepositoryBase<EWSSampleSentence> _repSentence = new RepositoryBase<EWSSampleSentence>();
 
-            EWSSampleSentence _sentence = _repSentence.Get(p => p.Sentence==sentence);
+            EWSSampleSentence _sentence = _repSentence.Get(p => p.Sentence == sentence);
 
             return _sentence;
         }
@@ -93,6 +93,40 @@ namespace EWS.Business.BS
             }
 
             _repSentence.Update(sentence);
+        }
+
+        public List<EWSSentenceGroup> EWSSentenceGroups(int UserId)
+        {
+            IRepositoryBase<EWSSentenceGroup> _resSentenceGroup = new RepositoryBase<EWSSentenceGroup>();
+
+            List<EWSSentenceGroup> listSentenceGroup = _resSentenceGroup.GetList(p => p.UserID == UserId);
+
+            return listSentenceGroup;
+        }
+
+        public List<EWSSampleSentence> EWSGroupSentences(Guid groupUN)
+        {
+            IRepositoryBase<EWSSentenceGroupTable> _resSentencesOfGroup = new RepositoryBase<EWSSentenceGroupTable>();
+
+            IRepositoryBase<EWSSampleSentence> _resSentences = new RepositoryBase<EWSSampleSentence>();
+
+            List<EWSSentenceGroupTable> listGroupTable;
+
+            if (groupUN != Guid.Empty)
+                listGroupTable = _resSentencesOfGroup.GetList(p => p.GroupUN == groupUN);
+            else
+                listGroupTable = _resSentencesOfGroup.GetList();
+
+            List<EWSSampleSentence> returnList = new List<EWSSampleSentence>();
+
+            foreach (var item in listGroupTable)
+            {
+                EWSSampleSentence sent = _resSentences.Get(p => p.UN == item.SentenceUN);
+
+                returnList.Add(sent);
+            }
+
+            return returnList;
         }
     }
 }

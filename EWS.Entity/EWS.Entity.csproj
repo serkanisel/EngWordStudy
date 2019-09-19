@@ -78,6 +78,12 @@
     <Compile Include="EWSSampleSentence.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="EWSSentenceGroup.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWSSentenceGroupTable.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="EWSUser.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>

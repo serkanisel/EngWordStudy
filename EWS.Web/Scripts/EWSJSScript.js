@@ -1053,6 +1053,9 @@ function AllSentences() {
         async: true,
         success: function (text, data) {
             $("#list").html(text);
+            $("#EWSList").change(function myfunction() {
+                SentenceGrupChanged();
+            });
         },
         error: function (jqXhr, textStatus, errorThrown) {
             Message(errorThrown, 'error');
@@ -1192,6 +1195,44 @@ function DeleteRelationWordSentence(UN) {
         },
         error: function (jqXhr, textStatus, errorThrown) {
 
+            Message(errorThrown, 'error');
+        }
+    });
+}
+
+function WriteEnglish() {
+    
+    $.ajax({
+        url: RootURL + 'StudyScreen/WriteEnglish',
+        type: 'POST',
+        async: false,
+        success: function (text, data) {
+            $('#contentIngilizcesiniYaz').html(text);
+        },
+        error: function (jqXhr, textStatus, errorThrown) {
+            Message(errorThrown, 'error');
+        }
+    });
+}
+
+function SentenceGrupChanged() {
+    //grubun listesini al
+
+    var e = document.getElementById("EWSList");
+    var UN = e.options[e.selectedIndex].value;
+
+    if (UN == '')
+        UN = EmptyGUID;
+
+    $.ajax({
+        url: RootURL + 'Sentence/GetGroupSentences',
+        type: 'POST',
+        async: false,
+        data: { UN: UN },
+        success: function (text, data) {
+            $("#sentenceResultDiv").html(text);
+        },
+        error: function (jqXhr, textStatus, errorThrown) {
             Message(errorThrown, 'error');
         }
     });

@@ -13,5 +13,11 @@ namespace EWS.Web.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult WriteEnglish()
+        {
+            return PartialView();
+        }
     }
 }

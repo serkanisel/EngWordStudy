@@ -29,7 +29,6 @@ C:\sisel\EWS\EWS.Windows\obj\Debug\EWS.Windows.pdb
 D:\My Projects\EWS\EWS.Windows\bin\Debug\EWS.Windows.exe.config
 D:\My Projects\EWS\EWS.Windows\bin\Debug\EWS.Windows.exe
 D:\My Projects\EWS\EWS.Windows\bin\Debug\EWS.Windows.pdb
-D:\My Projects\EWS\EWS.Windows\obj\Debug\EWS.Windows.csprojAssemblyReference.cache
 D:\My Projects\EWS\EWS.Windows\obj\Debug\EWS.Windows.Form1.resources
 D:\My Projects\EWS\EWS.Windows\obj\Debug\EWS.Windows.Properties.Resources.resources
 D:\My Projects\EWS\EWS.Windows\obj\Debug\EWS.Windows.csproj.GenerateResource.cache

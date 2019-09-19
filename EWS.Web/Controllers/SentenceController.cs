@@ -94,5 +94,15 @@ namespace EWS.Web.Controllers
             return Script("Message('Kelime ile cümle ilişki kaldırıldı','success');");
         }
 
+        [HttpPost]
+        public ActionResult GetGroupSentences(Guid UN)
+        {
+            ISentence isentence = new BSSentence();
+
+            var list= isentence.EWSGroupSentences(UN);
+
+            return PartialView("SampleList",list);
+        }
+
     }
 }

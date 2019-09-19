@@ -4,16 +4,62 @@
             <h4>Çalışma Ekranı</h4>
         </div>
     </div>
+
     <div class="row">
-        <a href="javascript:void(0)" class="btn btn-outline-dark"><i class="fa fa-flash fa-2x"></i>&nbsp; Flash Kart</a>&nbsp;
-        <a href="javascript:void(0)" class="btn btn-outline-dark"><i class="fa fa-dollar fa-2x"></i>&nbsp;&nbsp; İngilizcesini Yaz</a>&nbsp;
-        <a href="javascript:void(0)" class="btn btn-outline-dark"><i class="fa fa-turkish-lira fa-2x"></i>&nbsp;&nbsp; Türkçesini Yaz</a>&nbsp;
-        <a href="javascript:void(0)" class="btn btn-outline-dark"><i class="fa fa-table fa-2x"></i>&nbsp;&nbsp; Çoktan Seçmeli</a>&nbsp;
-        <a href="javascript:void(0)" class="btn btn-outline-dark"><i class="fa fa-battery-0 fa-2x"></i>&nbsp;&nbsp; Boşluk Doldur</a>&nbsp;
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" onclick="WriteEnglish()" id="pillsIngilizcesiniYaz" data-toggle="pill" href="#IngilizcesiniYaz" role="tab" aria-controls="IngilizcesiniYaz" aria-expanded="true"><i class="fa fa-dollar fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pillsTurkcesiniYaz" data-toggle="pill" href="#divTurkcesiniYaz" role="tab" aria-controls="divTurkcesiniYaz" aria-expanded="true" onclick="GetKnownWord()"><i class="fa fa-turkish-lira fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pillsFlashCard" data-toggle="pill" href="#divFlashCard" role="tab" aria-controls="divFlashCard" aria-expanded="true"><i class="fa fa-flash fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pillsCoktanSecmeli" data-toggle="pill" href="#divCoktanSecmeli" role="tab" aria-controls="divCoktanSecmeli" aria-expanded="true"><i class="fa fa-table fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pillsBoslukDoldurma" data-toggle="pill" href="#divBoslukDoldurma" role="tab" aria-controls="divBoslukDoldurma" aria-expanded="true"><i class="fa fa-battery-0 fa-2x"></i></a>
+            </li>
+        </ul>
     </div>
-    
-    <div class="row mt-2" id="studyScreenAlt">
-        Buraya Gelecek
+
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="IngilizcesiniYaz" role="tabpanel" aria-labelledby="pillsIngilizcesiniYaz">
+            <div class="row">
+                <div class="col-12" id="contentIngilizcesiniYaz">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade show" id="divTurkcesiniYaz" role="tabpanel" aria-labelledby="pillsTurkcesiniYaz">
+            <div id="contentTurkcesiniYaz">
+                
+            </div>
+        </div>
+
+        <div class="tab-pane fade show" id="divFlashCard" role="tabpanel" aria-labelledby="pillsFlashCard">
+            <div id="contentFlashCard">
+                
+            </div>
+        </div>
+
+        <div class="tab-pane fade show" id="divCoktanSecmeli" role="tabpanel" aria-labelledby="pillsCoktanSecmeli">
+            <div id="contentCoktanSecmeli">
+                
+            </div>
+        </div>
+
+        <div class="tab-pane fade show" id="divBoslukDoldurma" role="tabpanel" aria-labelledby="pillsBoslukDoldurma">
+            <div class="container" id="contentBoslukDoldurma">
+               
+            </div>
+        </div>
     </div>
+
+   
 </div>
 
