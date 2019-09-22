@@ -21,5 +21,10 @@ namespace EWS.Business.Contract
         List<EWSSampleSentence> SearchSentence(string searchWord);
 
         EWSSampleSentence GetSentenceByBody(string sentence);
+
+        List<EWSSentenceGroup> EWSSentenceGroups(int UserId);
+
+
+        List<EWSSampleSentence> EWSGroupSentences(Guid groupUN);
     }
 }

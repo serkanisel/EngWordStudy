@@ -760,6 +760,8 @@
     <Content Include="Views\Home\SearchGenel.cshtml" />
     <Content Include="Views\Home\SearchWord.cshtml" />
     <Content Include="Views\EWSWords\DivNewWord.cshtml" />
+    <Content Include="Views\StudyScreen\WriteEnglish.cshtml" />
+    <Content Include="Views\Sentence\SampleList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

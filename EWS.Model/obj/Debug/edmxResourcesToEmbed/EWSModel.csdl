@@ -71,6 +71,8 @@
       <End Role="EWSReadingPartCategory" EntitySet="EWSReadingPartCategory" />
       <End Role="EWSReadPart" EntitySet="EWSReadPart" />
     </AssociationSet>
+    <EntitySet Name="EWSSentenceGroupTable" EntityType="EWS.Model.EWSSentenceGroupTable" />
+    <EntitySet Name="EWSSentenceGroup" EntityType="EWS.Model.EWSSentenceGroup" />
   </EntityContainer>
   <EntityType Name="EWSKnownWords">
     <Key>
@@ -375,4 +377,20 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="EWSSentenceGroupTable">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="Guid" Nullable="false" />
+    <Property Name="SentenceUN" Type="Guid" />
+    <Property Name="GroupUN" Type="Guid" />
+  </EntityType>
+  <EntityType Name="EWSSentenceGroup">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="Int32" />
+  </EntityType>
 </Schema>

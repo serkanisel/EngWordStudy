@@ -69,6 +69,22 @@
           <Property Name="SentenceMean" Type="varchar(max)" />
           <Property Name="ListUN" Type="uniqueidentifier" />
         </EntityType>
+        <EntityType Name="EWSSentenceGroup">
+          <Key>
+            <PropertyRef Name="UN" />
+          </Key>
+          <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="UserID" Type="int" />
+        </EntityType>
+        <EntityType Name="EWSSentenceGroupTable">
+          <Key>
+            <PropertyRef Name="UN" />
+          </Key>
+          <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SentenceUN" Type="uniqueidentifier" />
+          <Property Name="GroupUN" Type="uniqueidentifier" />
+        </EntityType>
         <EntityType Name="EWSUser">
           <Key>
             <PropertyRef Name="ID" />
@@ -274,6 +290,8 @@
           <EntitySet Name="EWSReadingPartCategory" EntityType="Self.EWSReadingPartCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EWSReadPart" EntityType="Self.EWSReadPart" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EWSSampleSentence" EntityType="Self.EWSSampleSentence" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EWSSentenceGroup" EntityType="Self.EWSSentenceGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EWSSentenceGroupTable" EntityType="Self.EWSSentenceGroupTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EWSUser" EntityType="Self.EWSUser" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EWSWillLearn" EntityType="Self.EWSWillLearn" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EWSWord" EntityType="Self.EWSWord" Schema="dbo" store:Type="Tables" />
@@ -409,6 +427,8 @@
             <End Role="EWSReadingPartCategory" EntitySet="EWSReadingPartCategory" />
             <End Role="EWSReadPart" EntitySet="EWSReadPart" />
           </AssociationSet>
+          <EntitySet Name="EWSSentenceGroupTable" EntityType="EWS.Model.EWSSentenceGroupTable" />
+          <EntitySet Name="EWSSentenceGroup" EntityType="EWS.Model.EWSSentenceGroup" />
         </EntityContainer>
         <EntityType Name="EWSKnownWords">
           <Key>
@@ -713,6 +733,22 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="EWSSentenceGroupTable">
+          <Key>
+            <PropertyRef Name="UN" />
+          </Key>
+          <Property Name="UN" Type="Guid" Nullable="false" />
+          <Property Name="SentenceUN" Type="Guid" />
+          <Property Name="GroupUN" Type="Guid" />
+        </EntityType>
+        <EntityType Name="EWSSentenceGroup">
+          <Key>
+            <PropertyRef Name="UN" />
+          </Key>
+          <Property Name="UN" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -818,6 +854,24 @@
             <EntityTypeMapping TypeName="EWS.Model.EWSReadingPartCategory">
               <MappingFragment StoreEntitySet="EWSReadingPartCategory">
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="UN" ColumnName="UN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EWSSentenceGroupTable">
+            <EntityTypeMapping TypeName="EWS.Model.EWSSentenceGroupTable">
+              <MappingFragment StoreEntitySet="EWSSentenceGroupTable">
+                <ScalarProperty Name="GroupUN" ColumnName="GroupUN" />
+                <ScalarProperty Name="SentenceUN" ColumnName="SentenceUN" />
+                <ScalarProperty Name="UN" ColumnName="UN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EWSSentenceGroup">
+            <EntityTypeMapping TypeName="EWS.Model.EWSSentenceGroup">
+              <MappingFragment StoreEntitySet="EWSSentenceGroup">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="UN" ColumnName="UN" />
               </MappingFragment>
             </EntityTypeMapping>

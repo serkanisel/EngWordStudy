@@ -1,0 +1,25 @@
+﻿@using EWS.Web.Helpers
+
+<div class="row">
+    <div class="col-12">
+        İngilizcesini Yaz
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            @Html._EWSDropdown("EWSList", "Grup", false, "", "", "Lookup/GetEWSSampleSenteceGroup?userID=" + ((EWS.Model.EWSUser)Session["CurrentUser"]).ID.ToString(), "UN", "Name", secinizEkle: true, style: "height:40px;font-weight:bold;")
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <span id="txtTurkce"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="text" class="form-control col-12" />
+        </div>
+    </div>
+</div>
+

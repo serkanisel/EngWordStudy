@@ -1,6 +1,13 @@
-﻿@model List<EWS.Model.EWSSampleSentence>
+﻿@using EWS.Web.Helpers
 
-<div class="container" id="sentenceListMain">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            @Html._EWSDropdown("EWSList", "Grup", false, "", "", "Lookup/GetEWSSampleSenteceGroup?userID=" + ((EWS.Model.EWSUser)Session["CurrentUser"]).ID.ToString(), "UN", "Name", secinizEkle: true, style: "height:40px;font-weight:bold;")
+        </div>
+    </div>
+</div>
+<div class="container mt-4" id="sentenceListMain">
     <div class="input-group mb-3">
         <input type="text" class="form-control" id="txtSentenceAra" placeholder="kelime giriniz" aria-label="kelime giriniz" aria-describedby="basic-addon2">
         <div class="input-group-append">
@@ -8,27 +15,6 @@
         </div>
     </div>
 
-    @foreach (var item in Model)
-    {
-        <div class="row pb-2 m-1 rounded bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 m-1">
-                        <input type="text" class="form-control listText bg-light" value="@item.Sentence" id="sentence_@item.UN" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 m-1">
-                        <input type="text" class="form-control listText bg-light" value="@item.SentenceMean" id="sentenceMean_@item.UN" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 m-1">
-                        <button onclick="UpdateSentence('@item.UN')" class="btn btn-secondary"><i class="fa fa-save"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    }
+   
 </div>
 

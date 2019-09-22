@@ -64,6 +64,22 @@
     <Property Name="SentenceMean" Type="varchar(max)" />
     <Property Name="ListUN" Type="uniqueidentifier" />
   </EntityType>
+  <EntityType Name="EWSSentenceGroup">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="EWSSentenceGroupTable">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SentenceUN" Type="uniqueidentifier" />
+    <Property Name="GroupUN" Type="uniqueidentifier" />
+  </EntityType>
   <EntityType Name="EWSUser">
     <Key>
       <PropertyRef Name="ID" />
@@ -269,6 +285,8 @@
     <EntitySet Name="EWSReadingPartCategory" EntityType="Self.EWSReadingPartCategory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSReadPart" EntityType="Self.EWSReadPart" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSSampleSentence" EntityType="Self.EWSSampleSentence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSSentenceGroup" EntityType="Self.EWSSentenceGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSSentenceGroupTable" EntityType="Self.EWSSentenceGroupTable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSUser" EntityType="Self.EWSUser" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSWillLearn" EntityType="Self.EWSWillLearn" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSWord" EntityType="Self.EWSWord" Schema="dbo" store:Type="Tables" />
