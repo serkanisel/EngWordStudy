@@ -57,6 +57,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="EWSGroupItem.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="EWSKnownWords.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
@@ -64,6 +67,9 @@
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="EWSList.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWSListWillLearn.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="EWSListWord.cs">
@@ -76,12 +82,6 @@
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="EWSSampleSentence.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EWSSentenceGroup.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EWSSentenceGroupTable.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="EWSUser.cs">

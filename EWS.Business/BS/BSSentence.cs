@@ -94,39 +94,5 @@ namespace EWS.Business.BS
 
             _repSentence.Update(sentence);
         }
-
-        public List<EWSSentenceGroup> EWSSentenceGroups(int UserId)
-        {
-            IRepositoryBase<EWSSentenceGroup> _resSentenceGroup = new RepositoryBase<EWSSentenceGroup>();
-
-            List<EWSSentenceGroup> listSentenceGroup = _resSentenceGroup.GetList(p => p.UserID == UserId);
-
-            return listSentenceGroup;
-        }
-
-        public List<EWSSampleSentence> EWSGroupSentences(Guid groupUN)
-        {
-            IRepositoryBase<EWSSentenceGroupTable> _resSentencesOfGroup = new RepositoryBase<EWSSentenceGroupTable>();
-
-            IRepositoryBase<EWSSampleSentence> _resSentences = new RepositoryBase<EWSSampleSentence>();
-
-            List<EWSSentenceGroupTable> listGroupTable;
-
-            if (groupUN != Guid.Empty)
-                listGroupTable = _resSentencesOfGroup.GetList(p => p.GroupUN == groupUN);
-            else
-                listGroupTable = _resSentencesOfGroup.GetList();
-
-            List<EWSSampleSentence> returnList = new List<EWSSampleSentence>();
-
-            foreach (var item in listGroupTable)
-            {
-                EWSSampleSentence sent = _resSentences.Get(p => p.UN == item.SentenceUN);
-
-                returnList.Add(sent);
-            }
-
-            return returnList;
-        }
-    }
+     }
 }

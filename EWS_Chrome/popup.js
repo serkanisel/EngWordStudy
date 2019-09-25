@@ -68,6 +68,11 @@ $(function(){
         getWordMean();
     });
 
+    $("#btnSearch").click(function(){
+        SearchWord();
+    });
+    
+
     $("#btnSaveWord").click(function(){
         saveNewWord();
     });
@@ -90,6 +95,31 @@ $(function(){
     
     function getWordMean(){
         var ewsword=$("#txtBody").val();
+
+        if(ewsword==null || ewsword=="")
+            return;
+
+        $.ajax({
+            url: RootURL + 'EWSActions/TranslateTextJson',
+            type: 'POST',
+            data: { TranslateText: ewsword },
+            async: true,
+            success: function (text, data) {
+                chrome.storage.sync.set({'EWSWord':ewsword},function(){
+            
+                });
+                        
+                $("#txtMean").val(text["Description"]);
+                $("#txtSentenceMean").val(text["Description"]);
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+                alert("Bir Hata var");
+            }
+        });
+    };
+
+    function SearchWord(){
+        var ewsword=$("#txtWord").val();
 
         if(ewsword==null || ewsword=="")
             return;

@@ -12,10 +12,14 @@ namespace EWS.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class EWSSentenceGroup
+    public partial class EWSListWillLearn
     {
         public System.Guid UN { get; set; }
-        public string Name { get; set; }
-        public Nullable<int> UserID { get; set; }
+        public int UserID { get; set; }
+        public Nullable<System.Guid> ListUN { get; set; }
+        public Nullable<System.Guid> WordUN { get; set; }
+    
+        public virtual EWSList EWSList { get; set; }
+        public virtual EWSWord EWSWord { get; set; }
     }
 }

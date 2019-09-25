@@ -104,20 +104,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EWSSentenceGroupTable">
-      <EntityTypeMapping TypeName="EWS.Model.EWSSentenceGroupTable">
-        <MappingFragment StoreEntitySet="EWSSentenceGroupTable">
+    <EntitySetMapping Name="EWSGroupItem">
+      <EntityTypeMapping TypeName="EWS.Model.EWSGroupItem">
+        <MappingFragment StoreEntitySet="EWSGroupItem">
           <ScalarProperty Name="GroupUN" ColumnName="GroupUN" />
-          <ScalarProperty Name="SentenceUN" ColumnName="SentenceUN" />
+          <ScalarProperty Name="ItemUN" ColumnName="ItemUN" />
           <ScalarProperty Name="UN" ColumnName="UN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EWSSentenceGroup">
-      <EntityTypeMapping TypeName="EWS.Model.EWSSentenceGroup">
-        <MappingFragment StoreEntitySet="EWSSentenceGroup">
+    <EntitySetMapping Name="EWSListWillLearn">
+      <EntityTypeMapping TypeName="EWS.Model.EWSListWillLearn">
+        <MappingFragment StoreEntitySet="EWSListWillLearn">
+          <ScalarProperty Name="WordUN" ColumnName="WordUN" />
+          <ScalarProperty Name="ListUN" ColumnName="ListUN" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="UN" ColumnName="UN" />
         </MappingFragment>
       </EntityTypeMapping>

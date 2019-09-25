@@ -12,10 +12,10 @@ namespace EWS.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class EWSSentenceGroupTable
+    public partial class EWSGroupItem
     {
         public System.Guid UN { get; set; }
-        public Nullable<System.Guid> SentenceUN { get; set; }
-        public Nullable<System.Guid> GroupUN { get; set; }
+        public System.Guid ItemUN { get; set; }
+        public System.Guid GroupUN { get; set; }
     }
 }

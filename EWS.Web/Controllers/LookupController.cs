@@ -29,14 +29,5 @@ namespace EWS.Web.Controllers
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
-
-        public JsonResult GetEWSSampleSenteceGroup(int userID)
-        {
-            ISentence iList = new BSSentence();
-
-            List<EWSSentenceGroup> result = iList.EWSSentenceGroups(userID);
-
-            return Json(result, JsonRequestBehavior.AllowGet);
-        }
     }
 }

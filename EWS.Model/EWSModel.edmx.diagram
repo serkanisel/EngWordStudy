@@ -30,8 +30,10 @@
         <AssociationConnector Association="EWS.Model.FK_EWSListWillLearn_EWSWord" />
         <EntityTypeShape EntityType="EWS.Model.EWSReadingPartCategory" Width="1.5" PointX="0.75" PointY="0.875" />
         <AssociationConnector Association="EWS.Model.FK_EWSReadPart_EWSReadingPartCategory" />
-        <EntityTypeShape EntityType="EWS.Model.EWSSentenceGroupTable" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="EWS.Model.EWSSentenceGroup" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EWS.Model.EWSGroupItem" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="EWS.Model.EWSListWillLearn" Width="1.5" PointX="5.25" PointY="19.125" />
+        <AssociationConnector Association="EWS.Model.FK_EWSListWillLearn_EWSList" />
+        <AssociationConnector Association="EWS.Model.FK_EWSListWillLearn_EWSWord1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -21,6 +21,7 @@ namespace EWS.Model
             this.EWSListWord = new HashSet<EWSListWord>();
             this.EWSReadPart = new HashSet<EWSReadPart>();
             this.EWSSampleSentence = new HashSet<EWSSampleSentence>();
+            this.EWSListWillLearn = new HashSet<EWSListWillLearn>();
         }
     
         public System.Guid UN { get; set; }
@@ -37,5 +38,7 @@ namespace EWS.Model
         public virtual ICollection<EWSReadPart> EWSReadPart { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EWSSampleSentence> EWSSampleSentence { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EWSListWillLearn> EWSListWillLearn { get; set; }
     }
 }

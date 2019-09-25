@@ -80,3 +80,21 @@ D:\My Projects\EWS\EWS.Repository\obj\Debug\EWS.Repository.csproj.CoreCompileInp
 D:\My Projects\EWS\EWS.Repository\obj\Debug\EWS.Repository.csproj.CopyComplete
 D:\My Projects\EWS\EWS.Repository\obj\Debug\EWS.Repository.dll
 D:\My Projects\EWS\EWS.Repository\obj\Debug\EWS.Repository.pdb
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EWS.Repository.dll.config
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EWS.Repository.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EWS.Repository.pdb
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EntityFramework.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EWS.Model.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EWS.Entity.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EWS.Model.pdb
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EWS.Model.dll.config
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EntityFramework.xml
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EWS.Entity.pdb
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\bin\Debug\EWS.Entity.dll.config
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\obj\Debug\EWS.Repository.csprojAssemblyReference.cache
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\obj\Debug\EWS.Repository.csproj.CoreCompileInputs.cache
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\obj\Debug\EWS.Repository.csproj.CopyComplete
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\obj\Debug\EWS.Repository.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Repository\obj\Debug\EWS.Repository.pdb

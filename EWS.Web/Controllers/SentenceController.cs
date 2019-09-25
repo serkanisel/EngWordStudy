@@ -77,7 +77,7 @@ namespace EWS.Web.Controllers
 
             List<EWSSampleSentence> model = isentence.SearchSentence(searchSentence);
 
-            return PartialView("Liste",model);
+            return PartialView("SampleList", model);
         }
 
         [HttpPost]
@@ -93,16 +93,6 @@ namespace EWS.Web.Controllers
 
             return Script("Message('Kelime ile cümle ilişki kaldırıldı','success');");
         }
-
-        [HttpPost]
-        public ActionResult GetGroupSentences(Guid UN)
-        {
-            ISentence isentence = new BSSentence();
-
-            var list= isentence.EWSGroupSentences(UN);
-
-            return PartialView("SampleList",list);
-        }
-
+      
     }
 }

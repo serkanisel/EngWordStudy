@@ -1053,9 +1053,7 @@ function AllSentences() {
         async: true,
         success: function (text, data) {
             $("#list").html(text);
-            $("#EWSList").change(function myfunction() {
-                SentenceGrupChanged();
-            });
+            
         },
         error: function (jqXhr, textStatus, errorThrown) {
             Message(errorThrown, 'error');
