@@ -71,8 +71,16 @@
       <End Role="EWSReadingPartCategory" EntitySet="EWSReadingPartCategory" />
       <End Role="EWSReadPart" EntitySet="EWSReadPart" />
     </AssociationSet>
-    <EntitySet Name="EWSSentenceGroupTable" EntityType="EWS.Model.EWSSentenceGroupTable" />
-    <EntitySet Name="EWSSentenceGroup" EntityType="EWS.Model.EWSSentenceGroup" />
+    <EntitySet Name="EWSGroupItem" EntityType="EWS.Model.EWSGroupItem" />
+    <EntitySet Name="EWSListWillLearn" EntityType="EWS.Model.EWSListWillLearn" />
+    <AssociationSet Name="FK_EWSListWillLearn_EWSList" Association="EWS.Model.FK_EWSListWillLearn_EWSList">
+      <End Role="EWSList" EntitySet="EWSList" />
+      <End Role="EWSListWillLearn" EntitySet="EWSListWillLearn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSListWillLearn_EWSWord1" Association="EWS.Model.FK_EWSListWillLearn_EWSWord1">
+      <End Role="EWSWord" EntitySet="EWSWord" />
+      <End Role="EWSListWillLearn" EntitySet="EWSListWillLearn" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="EWSKnownWords">
     <Key>
@@ -107,6 +115,7 @@
     <NavigationProperty Name="EWSListWord" Relationship="EWS.Model.FK_EWSListWord_EWSList" FromRole="EWSList" ToRole="EWSListWord" />
     <NavigationProperty Name="EWSReadPart" Relationship="EWS.Model.FK_EWSReadPart_EWSReadPart" FromRole="EWSList" ToRole="EWSReadPart" />
     <NavigationProperty Name="EWSSampleSentence" Relationship="EWS.Model.FK_EWSSampleSentence_EWSList" FromRole="EWSList" ToRole="EWSSampleSentence" />
+    <NavigationProperty Name="EWSListWillLearn" Relationship="EWS.Model.FK_EWSListWillLearn_EWSList" FromRole="EWSList" ToRole="EWSListWillLearn" />
   </EntityType>
   <EntityType Name="EWSListWord">
     <Key>
@@ -179,6 +188,7 @@
     <NavigationProperty Name="EWSWillLearn" Relationship="EWS.Model.FK_EWSListWillLearn_EWSWord" FromRole="EWSWord" ToRole="EWSWillLearn" />
     <Property Name="CreatedDate" Type="DateTime" Precision="3" />
     <Property Name="AddType" Type="Int32" />
+    <NavigationProperty Name="EWSListWillLearn" Relationship="EWS.Model.FK_EWSListWillLearn_EWSWord1" FromRole="EWSWord" ToRole="EWSListWillLearn" />
   </EntityType>
   <Association Name="FK_EWSListKnown_EWSUser">
     <End Type="EWS.Model.EWSUser" Role="EWSUser" Multiplicity="0..1" />
@@ -377,20 +387,47 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="EWSSentenceGroupTable">
+  <EntityType Name="EWSGroupItem">
     <Key>
       <PropertyRef Name="UN" />
     </Key>
     <Property Name="UN" Type="Guid" Nullable="false" />
-    <Property Name="SentenceUN" Type="Guid" />
-    <Property Name="GroupUN" Type="Guid" />
+    <Property Name="ItemUN" Type="Guid" Nullable="false" />
+    <Property Name="GroupUN" Type="Guid" Nullable="false" />
   </EntityType>
-  <EntityType Name="EWSSentenceGroup">
+  <EntityType Name="EWSListWillLearn">
     <Key>
       <PropertyRef Name="UN" />
     </Key>
     <Property Name="UN" Type="Guid" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="UserID" Type="Int32" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="ListUN" Type="Guid" />
+    <Property Name="WordUN" Type="Guid" />
+    <NavigationProperty Name="EWSList" Relationship="EWS.Model.FK_EWSListWillLearn_EWSList" FromRole="EWSListWillLearn" ToRole="EWSList" />
+    <NavigationProperty Name="EWSWord" Relationship="EWS.Model.FK_EWSListWillLearn_EWSWord1" FromRole="EWSListWillLearn" ToRole="EWSWord" />
   </EntityType>
+  <Association Name="FK_EWSListWillLearn_EWSList">
+    <End Type="EWS.Model.EWSList" Role="EWSList" Multiplicity="0..1" />
+    <End Type="EWS.Model.EWSListWillLearn" Role="EWSListWillLearn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSList">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSListWillLearn">
+        <PropertyRef Name="ListUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSListWillLearn_EWSWord1">
+    <End Type="EWS.Model.EWSWord" Role="EWSWord" Multiplicity="0..1" />
+    <End Type="EWS.Model.EWSListWillLearn" Role="EWSListWillLearn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSWord">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSListWillLearn">
+        <PropertyRef Name="WordUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

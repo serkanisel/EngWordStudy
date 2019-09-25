@@ -807,7 +807,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>38763</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/EWS.Web</IISUrl>
+          <IISUrl>http://localhost:8010/EWS.Web</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
           <IISAppRootUrl>http://localhost/EWS.Web</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

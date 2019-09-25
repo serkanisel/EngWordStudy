@@ -1,6 +1,6 @@
 var contextMenuItem = {
     "id":"EWS",
-    "title":"EWS:Save Word",
+    "title":"EWS",
     "contexts": ["selection"]
 };
 

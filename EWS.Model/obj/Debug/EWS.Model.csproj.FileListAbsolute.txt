@@ -66,3 +66,18 @@ D:\My Projects\EWS\EWS.Model\obj\Debug\EWS.Model.csproj.CoreCompileInputs.cache
 D:\My Projects\EWS\EWS.Model\obj\Debug\EWS.Model.csproj.CopyComplete
 D:\My Projects\EWS\EWS.Model\obj\Debug\EWS.Model.dll
 D:\My Projects\EWS\EWS.Model\obj\Debug\EWS.Model.pdb
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\bin\Debug\EWS.Model.dll.config
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\bin\Debug\EWS.Model.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\bin\Debug\EWS.Model.pdb
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\bin\Debug\EntityFramework.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\bin\Debug\EWS.Entity.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\bin\Debug\EWS.Entity.pdb
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\bin\Debug\EWS.Entity.dll.config
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\bin\Debug\EntityFramework.xml
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\obj\Debug\EWS.Model.csprojAssemblyReference.cache
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\obj\Debug\EWS.Model.csproj.CoreCompileInputs.cache
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\obj\Debug\EWS.Model.csproj.CopyComplete
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\obj\Debug\EWS.Model.dll
+E:\Projects\EngWordStudy\EngWordStudy\EWS.Model\obj\Debug\EWS.Model.pdb

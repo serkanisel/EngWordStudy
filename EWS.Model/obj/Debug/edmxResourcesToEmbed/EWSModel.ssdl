@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="EWS.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EWSGroupItem">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ItemUN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GroupUN" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
   <EntityType Name="EWSKnownWords">
     <Key>
       <PropertyRef Name="UN" />
@@ -24,6 +32,15 @@
     <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="UserID" Type="int" />
     <Property Name="State" Type="smallint" />
+  </EntityType>
+  <EntityType Name="EWSListWillLearn">
+    <Key>
+      <PropertyRef Name="UN" />
+    </Key>
+    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ListUN" Type="uniqueidentifier" />
+    <Property Name="WordUN" Type="uniqueidentifier" />
   </EntityType>
   <EntityType Name="EWSListWord">
     <Key>
@@ -63,22 +80,6 @@
     <Property Name="UserID" Type="int" />
     <Property Name="SentenceMean" Type="varchar(max)" />
     <Property Name="ListUN" Type="uniqueidentifier" />
-  </EntityType>
-  <EntityType Name="EWSSentenceGroup">
-    <Key>
-      <PropertyRef Name="UN" />
-    </Key>
-    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="500" />
-    <Property Name="UserID" Type="int" />
-  </EntityType>
-  <EntityType Name="EWSSentenceGroupTable">
-    <Key>
-      <PropertyRef Name="UN" />
-    </Key>
-    <Property Name="UN" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="SentenceUN" Type="uniqueidentifier" />
-    <Property Name="GroupUN" Type="uniqueidentifier" />
   </EntityType>
   <EntityType Name="EWSUser">
     <Key>
@@ -165,6 +166,30 @@
         <PropertyRef Name="UN" />
       </Principal>
       <Dependent Role="EWSKnownWords">
+        <PropertyRef Name="WordUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSListWillLearn_EWSList">
+    <End Role="EWSList" Type="Self.EWSList" Multiplicity="0..1" />
+    <End Role="EWSListWillLearn" Type="Self.EWSListWillLearn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSList">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSListWillLearn">
+        <PropertyRef Name="ListUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWSListWillLearn_EWSWord">
+    <End Role="EWSWord" Type="Self.EWSWord" Multiplicity="0..1" />
+    <End Role="EWSListWillLearn" Type="Self.EWSListWillLearn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWSWord">
+        <PropertyRef Name="UN" />
+      </Principal>
+      <Dependent Role="EWSListWillLearn">
         <PropertyRef Name="WordUN" />
       </Dependent>
     </ReferentialConstraint>
@@ -278,15 +303,15 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="EWSModelStoreContainer">
+    <EntitySet Name="EWSGroupItem" EntityType="Self.EWSGroupItem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSKnownWords" EntityType="Self.EWSKnownWords" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSLearnList" EntityType="Self.EWSLearnList" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSList" EntityType="Self.EWSList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWSListWillLearn" EntityType="Self.EWSListWillLearn" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSListWord" EntityType="Self.EWSListWord" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSReadingPartCategory" EntityType="Self.EWSReadingPartCategory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSReadPart" EntityType="Self.EWSReadPart" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSSampleSentence" EntityType="Self.EWSSampleSentence" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="EWSSentenceGroup" EntityType="Self.EWSSentenceGroup" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="EWSSentenceGroupTable" EntityType="Self.EWSSentenceGroupTable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSUser" EntityType="Self.EWSUser" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSWillLearn" EntityType="Self.EWSWillLearn" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EWSWord" EntityType="Self.EWSWord" Schema="dbo" store:Type="Tables" />
@@ -309,6 +334,14 @@
     <AssociationSet Name="FK_EWSListKnown_EWSWord" Association="Self.FK_EWSListKnown_EWSWord">
       <End Role="EWSWord" EntitySet="EWSWord" />
       <End Role="EWSKnownWords" EntitySet="EWSKnownWords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSListWillLearn_EWSList" Association="Self.FK_EWSListWillLearn_EWSList">
+      <End Role="EWSList" EntitySet="EWSList" />
+      <End Role="EWSListWillLearn" EntitySet="EWSListWillLearn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWSListWillLearn_EWSWord" Association="Self.FK_EWSListWillLearn_EWSWord">
+      <End Role="EWSWord" EntitySet="EWSWord" />
+      <End Role="EWSListWillLearn" EntitySet="EWSListWillLearn" />
     </AssociationSet>
     <AssociationSet Name="FK_EWSListWord_EWSList" Association="Self.FK_EWSListWord_EWSList">
       <End Role="EWSList" EntitySet="EWSList" />

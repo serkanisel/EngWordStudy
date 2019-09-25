@@ -35,7 +35,7 @@ namespace EWS.Model
         public virtual DbSet<EWSWord> EWSWord { get; set; }
         public virtual DbSet<EWSWillLearn> EWSWillLearn { get; set; }
         public virtual DbSet<EWSReadingPartCategory> EWSReadingPartCategory { get; set; }
-        public virtual DbSet<EWSSentenceGroupTable> EWSSentenceGroupTable { get; set; }
-        public virtual DbSet<EWSSentenceGroup> EWSSentenceGroup { get; set; }
+        public virtual DbSet<EWSGroupItem> EWSGroupItem { get; set; }
+        public virtual DbSet<EWSListWillLearn> EWSListWillLearn { get; set; }
     }
 }
